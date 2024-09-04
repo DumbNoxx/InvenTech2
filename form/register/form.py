@@ -23,7 +23,7 @@ class FormRegister(FormRegisterDesigner):
 				user.password = end_dec.encrypted(self.password.get())
 				self.auth_repository.insertUser(user)
 				messagebox.showinfo(
-					message='Se registro el usuario',title='Registro de Usuario')
+					message=f'Usuario "{self.usuario.get()}" registrado satisfactoriamente',title='Registro de Usuario')
 				self.ventana.destroy()
 		
 
@@ -34,7 +34,7 @@ class FormRegister(FormRegisterDesigner):
 		if(self.password.get() != self.confirmation.get()):
 			status = False
 			messagebox.showerror(
-				message='Las contraseñas no coinciden, por favor verifica el registro',title='Error')
+				message='Las contraseñas no coinciden, por favor verifica el registro',title='Error al registrar' )
 			self.password.delete(0,tk.END)
 			self.confirmation.delete(0,tk.END)
 		return status
@@ -44,7 +44,7 @@ class FormRegister(FormRegisterDesigner):
 		if(user != None):
 			status = True
 			messagebox.showerror(
-				message='El usuario ya existe',title='Error')
+				message='El usuario ya existe',title='Error al registrar')
 		return status
 
 
