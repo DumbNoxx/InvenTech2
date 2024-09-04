@@ -1,13 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter.font import BOLD
 import util.generic as util
 
 class FormRegisterDesigner:
-
-	def register():
-		pass
-
 
 	def __init__(self):
 		self.ventana = tk.Toplevel()
@@ -59,3 +54,6 @@ class FormRegisterDesigner:
 		
 
 		self.ventana.mainloop()
+
+def register():
+	pass

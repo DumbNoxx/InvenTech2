@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter.font import BOLD
 import util.generic as util
 
 class FormLoginDesigner:
@@ -48,7 +47,7 @@ class FormLoginDesigner:
 		self.password.pack(fill=tk.X,padx=20,pady=10)
 		self.password.config(show='*')
 
-		inicio = tk.Button(frame_form_fill,text='Iniciar Sesion',font=('Times',15,BOLD),bg='#8f68b5',bd=0,fg='black',command=self.verificar)
+		inicio = tk.Button(frame_form_fill,text='Iniciar Sesion',font=('Times',15),bg='#8f68b5',bd=0,fg='black',command=self.verificar)
 		inicio.pack(fill=tk.X,padx=20,pady=20)
 		inicio.bind('<Return>',(lambda event:self.verificar()))
 		

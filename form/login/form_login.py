@@ -28,11 +28,11 @@ class FormLogin(FormLoginDesigner):
 		if(user == None):
 			status = False
 			messagebox.showerror(
-				message='El usuario no existe, por favor registrese',title='Error')
-			return status
+				message='El usuario no existe, por favor registrese',title='Error',parent=self.ventana)
+		return status
 
 	def isPassword(self,password:str,user:Auth_user):
-		b_password = end_dec.decrypt(user,password)
+		b_password = end_dec.decrypt(user.password)
 		if(password == b_password):
 			self.ventana.destroy()
 			MasterPanel()
