@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 import util.generic as util
+from tkinter import messagebox
 
 class FormLoginDesigner:
 
@@ -57,6 +58,14 @@ class FormLoginDesigner:
 		inicio = tk.Button(frame_form_fill,text='Registrar Usuario',font=('Dyuthi',15),bg='#8f68b5',bd=0,fg='black',command=self.userRegister)
 		inicio.pack(fill=tk.X,padx=20,pady=20)
 		inicio.bind('<Return>',(lambda event:self.userRegister()))
+
+		def leave():
+			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir?', icon='question', default='no')
+			if resultado == 'yes':
+				self.ventana.destroy()
+
+		inicio = tk.Button(frame_form_fill,text='Salir',font=('Dyuthi',15),bg='#8f68b5',bd=0,fg='black',command=leave)
+		inicio.pack(fill=tk.X,padx=15,pady=15)
 		
 
 		self.ventana.mainloop()

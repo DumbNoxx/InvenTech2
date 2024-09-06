@@ -29,6 +29,8 @@ class FormLogin(FormLoginDesigner):
 			status = False
 			messagebox.showerror(
 				message='El usuario no existe, por favor registrese',title='Error',parent=self.ventana)
+			self.usuario.delete(0,tk.END)
+			self.password.delete(0,tk.END)
 		return status
 
 	def isPassword(self,password:str,user:Auth_user):
@@ -38,5 +40,6 @@ class FormLogin(FormLoginDesigner):
 			MasterPanel()
 		else:
 			messagebox.showerror(
-			message='La contraseña no es correcta',title='Error')	
+			message='La contraseña no es correcta',title='Error')
+			self.password.delete(0,tk.END)
 	
