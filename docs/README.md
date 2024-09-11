@@ -12,4 +12,4 @@ He creado la ventana de agregar producto, ya la he diseñado, ya tiene su aparta
 
 ## Buscar Producto
 He creado la ventana de buscar un producto o ver la lista de productos, aqui sufri un poco con el diseño ya que no soy mucho de hacer Frontend, pero si vamos a darle con todo, todavia no se ha diseñado la parte backend, pronto añadire la parte backend, espero les haya gustado el diseño de la ventana, aunque sufri un poco xd
-<img src='/resources/screenshot/screenshot2.png'
+<img src='/resources/screenshot/screenshot2.png'>
