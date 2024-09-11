@@ -3,6 +3,7 @@ from tkinter import ttk
 import util.generic as util
 from tkinter import messagebox
 
+
 class FormLoginDesigner:
 
 	def verificar(self):

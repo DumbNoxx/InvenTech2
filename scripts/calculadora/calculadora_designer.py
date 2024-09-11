@@ -75,6 +75,7 @@ class CalculadoraDesigner:
 		self.ventana.geometry('+500+80')
 		self.ventana.columnconfigure(0,weight=1)
 		self.ventana.rowconfigure(0,weight=1)
+		self.ventana.resizable(width=0,height=0)
 		
 		stilos = ttk.Style()
 		stilos = ttk.Style()

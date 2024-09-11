@@ -14,6 +14,7 @@ class AgregarProductoDesigner:
 		self.ventana.title('Agregar Producto')
 		util.centrar_ventana(self.ventana,600,350)
 		self.ventana.config(bg='#fad7a0')
+		self.ventana.resizable(width=0,height=0)
 
 		logo = util.leer_image('./resources/designer/logo.png',(200,200))
 
@@ -58,7 +59,7 @@ class AgregarProductoDesigner:
 		boton_agregar.pack(fill=tk.X,padx=20,pady=10)
 
 		def leave():
-			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir?', icon='question', default='no')
+			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir de la ventana?', icon='question', default='no')
 			if resultado == 'yes':
 				self.ventana.destroy()
 

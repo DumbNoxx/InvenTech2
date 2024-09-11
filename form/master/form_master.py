@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 from scripts.calculadora.calculadora import CalculadoraCreate
 from scripts.agregar_producto.agregar_producto import AgregarProductoCreate
+from scripts.ver_productos.ver_productos import VerProductosCreate
 import subprocess
 from tkinter import messagebox
 
@@ -36,6 +37,7 @@ class MasterPanel:
 		label_description = tk.Label(self.ventana,text='Sistema de Inventario',bg='#1abc9c',font=('Dyuthi',18),fg='#f4d03f')
 		label_description.place(x=70,y=90,relwidth=0.9,relheight=0.03)
 
+
 		def calcu():
 			CalculadoraCreate().mainloop()
 
@@ -47,6 +49,12 @@ class MasterPanel:
 
 		boton1 = tk.Button(self.ventana,text='Agregar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=product)
 		boton1.place(x=450,y=200,relwidth=0.09,relheight=0.07)
+
+		def verProduct():
+			VerProductosCreate().mainloop()
+
+		boton2 = tk.Button(self.ventana,text='Ver lista de productos',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=verProduct)
+		boton2.place(x=400,y=300,relwidth=0.11,relheight=0.07)
 
 		def leave():
 			resultado = messagebox.askquestion("Salir", '¿Estás seguro que quieres cerrar sesión?', icon='question', default='no')
