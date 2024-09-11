@@ -1,3 +1,4 @@
+'''
 import sqlalchemy as db
 from persistence.model import Inventary
 from sqlalchemy.orm import Session
@@ -21,3 +22,4 @@ class InventaryRepository():
 		with Session(self.engine) as session:
 			session.add(name,serial_id,cantidad_inventario_id)
 			session.commit()
+			'''

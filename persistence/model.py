@@ -10,10 +10,3 @@ class Auth_user(Base):
 	username = Column(String(150))
 	password = Column(String(128))
 
-class Inventary():
-	__tablename__ = 'inventary'
-	id = Column(Integer,autoincrement=True)
-	product_Name = Column(String(150))
-	Serial = Column(String(150))
-	cantidad_Inventario = Column(Integer)
-	

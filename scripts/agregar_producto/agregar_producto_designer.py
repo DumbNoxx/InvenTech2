@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
-from persistence.model import Inventary
-from persistence.repository.inventary_repository import InventaryRepository
+#from persistence.model import Inventary
+#from persistence.repository.inventary_repository import InventaryRepository
 import util.generic as util
 from tkinter import messagebox
 
@@ -19,8 +19,13 @@ class AgregarProductoDesigner:
 
 		frame_logo = tk.Frame(self.ventana,bd=0,width=200,relief=tk.SOLID,padx=5,pady=5,bg='#f7dc6f')
 		frame_logo.pack(side='left',expand=False,fill=tk.BOTH)
+
+		
 		label = tk.Label(frame_logo,image=logo,bg='#f7dc6f')
 		label.place(x=0,y=0,relwidth=1,relheight=1)
+
+		copyrigth = tk.Label(frame_logo,text='Nox Corporations ©',width=30,padx=3,pady=3,bg='#f7dc6f',font=('Dyuthi',10))
+		copyrigth.grid(column=0,row=0)
 
 		frame_top = tk.Frame(self.ventana,height=20,bd=0,relief=tk.SOLID,bg='#fad7a0')
 		frame_top.pack(side='top',expand=tk.YES,fill=tk.BOTH)

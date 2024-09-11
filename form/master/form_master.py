@@ -28,6 +28,9 @@ class MasterPanel:
 		label1 = tk.Label(self.ventana,image=logo,bg='#1abc9c')
 		label1.place(x=0,y=0,relwidth=1,relheight=1)
 
+		copyrigth = tk.Label(self.ventana,text='Nox Corporations ©',width=40,padx=6,pady=6,bg='#1abc9c',font=('Dyuthi',10))
+		copyrigth.place(x=1200,y=600,relwidth=0.10,relheight=0.10)
+
 		label_title = tk.Label(self.ventana,text='InvenTech',bg='#1abc9c',font=('Dyuthi',36),fg='#f4d03f')
 		label_title.place(x=70,y=40,relwidth=0.9,relheight=0.05)
 		label_description = tk.Label(self.ventana,text='Sistema de Inventario',bg='#1abc9c',font=('Dyuthi',18),fg='#f4d03f')
