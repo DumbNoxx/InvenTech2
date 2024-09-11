@@ -21,6 +21,9 @@ class CalculadoraDesigner:
 					entrada1.set(entrada2.get() + '+')
 				elif tecla == "-":
 					entrada1.set(entrada2.get() + '-')
+				elif tecla == "(":
+					entrada1.set(entrada2.get() + '*')
+				
 
 				entrada2.set('')
 

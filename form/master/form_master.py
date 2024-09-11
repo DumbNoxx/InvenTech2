@@ -4,6 +4,7 @@ import util.generic as util
 import os
 from dotenv import load_dotenv
 from scripts.calculadora.calculadora import CalculadoraCreate
+from scripts.agregar_producto.agregar_producto import AgregarProductoCreate
 import subprocess
 from tkinter import messagebox
 
@@ -38,7 +39,10 @@ class MasterPanel:
 		boton = tk.Button(self.ventana,text='Calculadora',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=calcu)
 		boton.place(x=620,y=170,relwidth=0.09,relheight=0.07)
 
-		boton1 = tk.Button(self.ventana,text='Agregar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black')
+		def product():
+			AgregarProductoCreate().mainloop()
+
+		boton1 = tk.Button(self.ventana,text='Agregar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=product)
 		boton1.place(x=450,y=200,relwidth=0.09,relheight=0.07)
 
 		def leave():
