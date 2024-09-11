@@ -8,7 +8,4 @@ Esta es una version mejorada de InvenTech donde es posible ingresa mediante un i
 
 ## Agregar Producto
 He creado la ventana de agregar producto, ya la he diseñado, ya tiene su apartado visual, aqui dejo una foto de como se ve su diseño, ya he terminado la parte fronted de la ventana de agregar un producto, ahora ire por el backend, poco a poco uwu.
-<img src='./resources/screenshot/Captura de pantalla de 2024-09-11 00-43-07.png'
-
-
-
+<img src='./resources/screenshot/Captura de pantalla de 2024-09-11 00-43-07.png'>
