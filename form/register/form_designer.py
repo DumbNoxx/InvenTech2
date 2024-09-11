@@ -13,7 +13,7 @@ class FormRegisterDesigner:
 
 		
 
-		logo = util.leer_image('./resources/logo.png',(200,200))
+		logo = util.leer_image('./resources/designer/logo.png',(200,200))
 
 		frame_logo = tk.Frame(self.ventana,bd=0,width=300,relief=tk.SOLID,padx=10,pady=10,bg='#78c2e2')
 		frame_logo.pack(side='left',expand=tk.NO,fill=tk.BOTH)
