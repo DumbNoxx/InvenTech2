@@ -2,6 +2,11 @@ import tkinter as tk
 from tkinter import ttk
 import util.generic as util
 from tkinter import messagebox
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+icon = os.getenv('ICON')
 
 
 class FormLoginDesigner:
@@ -18,7 +23,7 @@ class FormLoginDesigner:
 		self.ventana.config(bg='#fcfcfc')
 		self.ventana.resizable(width=0,height=0)
 		util.centrar_ventana(self.ventana,800,500)
-
+		icon_1 = tk.PhotoImage(file=icon)
 		
 
 		logo = util.leer_image('./resources/designer/logo.png',(200,200))
@@ -68,5 +73,5 @@ class FormLoginDesigner:
 		inicio = tk.Button(frame_form_fill,text='Salir',font=('Dyuthi',15),bg='#8f68b5',bd=0,fg='black',command=leave)
 		inicio.pack(fill=tk.X,padx=15,pady=15)
 		
-
+		self.ventana.iconphoto(True,icon_1)
 		self.ventana.mainloop()

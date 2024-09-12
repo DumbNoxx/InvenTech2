@@ -13,6 +13,7 @@ from tkinter import messagebox
 load_dotenv()
 Logo = os.getenv('LOGO')
 Login = os.getenv('LOGIN')
+icon = os.getenv('ICON')
 
 
 class MasterPanel:
@@ -23,6 +24,8 @@ class MasterPanel:
 		self.ventana.geometry("%dx%d+0+0" % (w,h))
 		self.ventana.config(bg='#09ab53')
 		self.ventana.resizable(width=0,height=0)
+		icon_1 = tk.PhotoImage(file=icon)
+
 
 		logo = util.leer_image(Logo,(350,350))
 
@@ -65,4 +68,6 @@ class MasterPanel:
 		cerrar_sesion = tk.Button(self.ventana,text='Cerrar Sesion',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=leave)
 		cerrar_sesion.place(x=10,y=600,relwidth=0.09,relheight=0.07)
 
+
+		self.ventana.iconphoto(True,icon_1)
 		self.ventana.mainloop()

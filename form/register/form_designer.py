@@ -1,6 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
 import util.generic as util
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+icon = os.getenv('ICON')
+
 
 class FormRegisterDesigner:
 
