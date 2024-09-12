@@ -3,6 +3,7 @@ from tkinter import ttk
 import util.generic as util
 import os
 from dotenv import load_dotenv
+from tkinter import messagebox
 
 load_dotenv()
 icon = os.getenv('ICON')
@@ -15,7 +16,7 @@ class FormRegisterDesigner:
 		self.ventana.title('Registrar Usuario')
 		self.ventana.config(bg='#fcfcfc')
 		self.ventana.resizable(width=0,height=0)
-		util.centrar_ventana(self.ventana,600,450)
+		util.centrar_ventana(self.ventana,700,500)
 
 		
 
@@ -55,9 +56,15 @@ class FormRegisterDesigner:
 		
 
 		register = tk.Button(frame_form_fill,text='Registrar',font=('Dyuthi',15),bg='#8f68b5',bd=0,fg='black',command=self.register)
-		register.pack(fill=tk.X,padx=20,pady=20)
+		register.pack(fill=tk.X,padx=10,pady=10)
 		register.bind('<Return>',(lambda event:self.register()))
 		
+		def leave():
+			resultado = messagebox.askquestion("Salir", '¿Estás seguro que quieres salir de la ventana?', icon='question', default='no')
+			if resultado == 'yes':
+				self.ventana.destroy()
+		boton_salir = tk.Button(frame_form_fill,text='Salir',font=('Dyuthi',11),bg='#8f68b5',bd=0,fg='black',command=leave)
+		boton_salir.pack(fill=tk.X,padx=10,pady=10)
 
 		self.ventana.mainloop()
 
