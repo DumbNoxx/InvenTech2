@@ -1,5 +1,5 @@
 import sqlalchemy as db
-from persistence.model import Auth_user
+from persistence.model import Auth_user,Inventary
 from sqlalchemy.orm import Session
 
 
@@ -19,4 +19,9 @@ class AuthUserRepository():
 	def insertUser(self,user:Auth_user):
 		with Session(self.engine) as session:
 			session.add(user)
+			session.commit()
+
+	def insertProduct(self,name_products:Inventary):
+		with Session(self.engine) as session:
+			session.add(name_products)
 			session.commit()

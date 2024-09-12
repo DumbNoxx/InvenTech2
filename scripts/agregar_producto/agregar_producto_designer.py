@@ -1,8 +1,6 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
-#from persistence.model import Inventary
-#from persistence.repository.inventary_repository import InventaryRepository
 import util.generic as util
 from tkinter import messagebox
 
@@ -12,7 +10,7 @@ class AgregarProductoDesigner:
 	def __init__(self):
 		self.ventana = tk.Toplevel()
 		self.ventana.title('Agregar Producto')
-		util.centrar_ventana(self.ventana,600,350)
+		util.centrar_ventana(self.ventana,700,450)
 		self.ventana.config(bg='#fad7a0')
 		self.ventana.resizable(width=0,height=0)
 
@@ -37,26 +35,33 @@ class AgregarProductoDesigner:
 		frame_fill = tk.Frame(self.ventana,height=50,bd=0,relief=tk.SOLID,bg='#fad7a0')
 		frame_fill.pack(side='bottom',expand=tk.YES,fill=tk.BOTH)
 
-		nombre_producto = tk.Label(frame_fill,text='Ingresa el nombre del producto',font=('Dyuthi',12),fg='black',bg='#fad7a0')
-		nombre_producto.pack(fill=tk.X,padx=20,pady=10)
+		etiqueta_nombre_producto = tk.Label(frame_fill,text='Ingresa el nombre del producto',font=('Dyuthi',12),fg='black',bg='#fad7a0')
+		etiqueta_nombre_producto.pack(fill=tk.X,padx=20,pady=10)
 
-		nombre_producto = ttk.Entry(frame_fill,font=('Dyuthi',11))
-		nombre_producto.pack(fill=tk.Y,padx=5,pady=5)
+		self.nombre_producto = ttk.Entry(frame_fill,font=('Dyuthi',11))
+		self.nombre_producto.pack(fill=tk.Y,padx=5,pady=5)
 
-		serial_producto = tk.Label(frame_fill,text='Ingresa el serial del producto',font=('Dyuthi',12),fg='black',bg='#fad7a0')
-		serial_producto.pack(fill=tk.X,padx=20,pady=10)
+		etiqueta_serial_producto = tk.Label(frame_fill,text='Ingresa el serial del producto',font=('Dyuthi',12),fg='black',bg='#fad7a0')
+		etiqueta_serial_producto.pack(fill=tk.X,padx=20,pady=10)
 
-		serial_producto = ttk.Entry(frame_fill,font=('Dyuthi',11))
-		serial_producto.pack(fill=tk.Y,padx=5,pady=5)
+		self.serial_producto = ttk.Entry(frame_fill,font=('Dyuthi',11))
+		self.serial_producto.pack(fill=tk.Y,padx=5,pady=5)
 
-		cantidad_producto = tk.Label(frame_fill,text='Ingresa la cantidad de productos que recibiste',font=('Dyuthi',12),fg='black',bg='#fad7a0')
-		cantidad_producto.pack(fill=tk.X,padx=20,pady=10)
+		etiqueta_cantidad_producto = tk.Label(frame_fill,text='Ingresa la cantidad de productos que recibiste',font=('Dyuthi',12),fg='black',bg='#fad7a0')
+		etiqueta_cantidad_producto.pack(fill=tk.X,padx=20,pady=10)
 
-		cantidad_producto = ttk.Entry(frame_fill,font=('Dyuthi',11))
-		cantidad_producto.pack(fill=tk.Y,padx=5,pady=5)
+		self.cantidad_producto = ttk.Entry(frame_fill,font=('Dyuthi',11))
+		self.cantidad_producto.pack(fill=tk.Y,padx=5,pady=5)
 
-		boton_agregar = tk.Button(frame_fill,text='Agregar Producto',font=('Dyuthi',12),bg='#f7dc6f',fg='black')
+		etiqueta_precio_producto = tk.Label(frame_fill,text='Ingresa el precio del producto',font=('Dyuthi',12),fg='black',bg='#fad7a0')
+		etiqueta_precio_producto.pack(fill=tk.X,padx=20,pady=10)
+
+		self.precio_producto = ttk.Entry(frame_fill,font=('Dyuthi',11))
+		self.precio_producto.pack(fill=tk.Y,padx=5,pady=5)
+
+		boton_agregar = tk.Button(frame_fill,text='Agregar Producto',font=('Dyuthi',12),bg='#f7dc6f',fg='black',command=self.Add)
 		boton_agregar.pack(fill=tk.X,padx=20,pady=10)
+		boton_agregar.bind('<Return>',(lambda event:self.Add()))
 
 		def leave():
 			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir de la ventana?', icon='question', default='no')
@@ -67,3 +72,8 @@ class AgregarProductoDesigner:
 		boton_salir.pack(fill=tk.X,padx=10,pady=10)
 
 		self.ventana.mainloop()
+
+
+
+def Add():
+	pass
