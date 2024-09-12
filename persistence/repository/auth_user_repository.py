@@ -25,3 +25,10 @@ class AuthUserRepository():
 		with Session(self.engine) as session:
 			session.add(name_products)
 			session.commit()
+
+	def getProductInInventary(self,name_products:str):
+		name:Inventary = None
+		with Session(self.engine) as session:
+			name = session.query(Inventary).filter_by(name_product=name).first()
+
+		return name

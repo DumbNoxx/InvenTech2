@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 icon = os.getenv('ICON')
-
+Logo = os.getenv('LOGO')
 
 class FormLoginDesigner:
 
@@ -26,7 +26,7 @@ class FormLoginDesigner:
 		icon_1 = tk.PhotoImage(file=icon)
 		
 
-		logo = util.leer_image('./resources/designer/logo.png',(200,200))
+		logo = util.leer_image(Logo,(200,200))
 
 		frame_logo = tk.Frame(self.ventana,bd=0,width=300,relief=tk.SOLID,padx=10,pady=10,bg='#abb2b9')
 		frame_logo.pack(side='left',expand=tk.NO,fill=tk.BOTH)

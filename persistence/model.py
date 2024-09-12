@@ -13,8 +13,8 @@ class Auth_user(Base):
 class Inventary(Base):
 	__tablename__ = 'inventary'
 	id = Column(Integer,primary_key=True,autoincrement=True)
-	name_product = Column(String(150))
-	serial_product = Column(Integer)
-	inventary_product = Column(Integer)
-	price_product = Column(Integer)
+	name_product = Column(String(150),nullable=False)
+	serial_product = Column(Integer,nullable=False)
+	inventary_product = Column(Integer,nullable=False)
+	price_product = Column(Integer,nullable=False)
 	 
