@@ -7,9 +7,10 @@ from tkinter import messagebox
 import os
 from dotenv import load_dotenv
 
-
+#Cargamos el archivo .env
 load_dotenv()
 icon = os.getenv('ICON')
+Logo = os.getenv('LOGO')
 
 ventana_principal = tk.Tk()
 util.centrar_ventana(ventana_principal,600,450)
@@ -45,6 +46,8 @@ boton.pack(fill=tk.X,padx=15,pady=15)
 
 copyright = tk.Label(ventana_principal,text='Nox Corporations ©',font=('Dyuthi',10))
 copyright.place(x=480,y=400,relwidth=0.20,relheight=0.05)
+frame_fill = tk.Frame(ventana_principal,height=20,width=5,bd=0,relief=tk.SOLID,bg='#fcfcfc')
+frame_fill.pack(side='bottom',expand=tk.YES,fill=tk.BOTH)
 
 
 ventana_principal.iconphoto(True,icon_1)
