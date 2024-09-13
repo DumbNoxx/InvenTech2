@@ -16,7 +16,7 @@ ventana_principal = tk.Tk()
 util.centrar_ventana(ventana_principal,600,470)
 ventana_principal.title('InvenTech Ventana Principal')
 ventana_principal.resizable(width=0,height=0)
-logo = util.leer_image(Logo,(200,130))
+logo = util.leer_image(Logo,(190,110))
 
 icon_1 = tk.PhotoImage(file=icon)
 
@@ -46,12 +46,12 @@ def leave():
 boton = tk.Button(ventana_principal,text='Salir',font=('Dyuthi',14),command=leave)
 boton.pack(fill=tk.X,padx=15,pady=15)
 
-copyright = tk.Label(ventana_principal,text='Nox Corporations ©',font=('Dyuthi',10))
-copyright.place(x=480,y=400,relwidth=0.20,relheight=0.05)
-frame_fill = tk.Frame(ventana_principal,height=20,width=5,bd=0,relief=tk.SOLID,bg='#fcfcfc')
+frame_fill = tk.Frame(ventana_principal,height=20,width=5,bd=0,relief=tk.SOLID)
 frame_fill.pack(side='bottom',expand=tk.YES,fill=tk.BOTH)
 frame_logo = tk.Frame(frame_fill,bd=1,width=100,height=100)
 frame_logo.pack(expand=tk.YES,fill=tk.BOTH)
+copyright = tk.Label(frame_fill,text='Nox Corporations ©',font=('Dyuthi',10))
+copyright.pack()
 
 def saludo():
     messagebox.showinfo(message='Gracias por usar la app <3',title='Gratidud')
