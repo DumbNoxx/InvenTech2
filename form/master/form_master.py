@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from scripts.calculadora.calculadora import CalculadoraCreate
 from scripts.agregar_producto.agregar_producto import AgregarProductoCreate
 from scripts.ver_productos.ver_productos import VerProductosCreate
+from scripts.facturar_producto.facturar_producto import FacturarProductCreate
 import subprocess
 from tkinter import messagebox
 
@@ -59,9 +60,10 @@ class MasterPanel:
 		boton2 = tk.Button(self.ventana,text='Ver lista de productos',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=verProduct)
 		boton2.place(x=400,y=300,relwidth=0.11,relheight=0.07)
 
+		def FacturarProduct():
+			FacturarProductCreate().mainloop()
 
-
-		boton3 = tk.Button(self.ventana,text='Facturar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black')
+		boton3 = tk.Button(self.ventana,text='Facturar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=FacturarProduct)
 		boton3.place(x=780,y=200,relwidth=0.11,relheight=0.07)
 
 		def leave():
