@@ -2,11 +2,14 @@ import tkinter as tk
 from tkinter import ttk
 import util.generic as util
 from tkinter import messagebox
-
+from persistence.model import Inventary
+from sqlalchemy.orm import Session
+import sqlalchemy as db
 
 class VerProductosDesigner:
 
 	def __init__(self):
+		self.engine = db.create_engine('sqlite:///db/login.sqlite',echo=False,future=True)
 		self.ventana = tk.Toplevel()
 		self.ventana.title('Ver Productos')
 		self.ventana.config(bg='#fcfcfc')
@@ -27,7 +30,7 @@ class VerProductosDesigner:
 
 		copyright = tk.Label(frame_copyright,text='Nox Corporations ©',font=('Dyuthi',8),bg='#ec7063',fg='black')
 		copyright.pack()
-		
+
 		frame_logo = tk.Frame(titulo_ventana,bd=1,width=100,height=100,bg='#ec7063')
 		frame_logo.grid(column=0,row=0)
 		label = tk.Label(frame_logo,image=logo,bg='#ec7063')
@@ -62,4 +65,4 @@ class VerProductosDesigner:
 		self.tree.heading('#1', text='Producto')
 		self.tree.heading('#2', text='Inventario')
 		self.tree.heading('#3', text='Precio')
-		self.ventana.mainlopp()
+		self.ventana.mainloop()

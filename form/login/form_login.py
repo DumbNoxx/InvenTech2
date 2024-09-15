@@ -43,4 +43,4 @@ class FormLogin(FormLoginDesigner):
 			messagebox.showerror(
 			message='La contraseña no es correcta',title='Error')
 			self.password.delete(0,tk.END)
-	
+

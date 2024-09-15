@@ -59,6 +59,11 @@ class MasterPanel:
 		boton2 = tk.Button(self.ventana,text='Ver lista de productos',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=verProduct)
 		boton2.place(x=400,y=300,relwidth=0.11,relheight=0.07)
 
+
+
+		boton3 = tk.Button(self.ventana,text='Facturar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black')
+		boton3.place(x=780,y=200,relwidth=0.11,relheight=0.07)
+
 		def leave():
 			resultado = messagebox.askquestion("Salir", '¿Estás seguro que quieres cerrar sesión?', icon='question', default='no')
 			if resultado == 'yes':

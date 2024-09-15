@@ -1,4 +1,10 @@
 from cryptography.fernet import Fernet
+import os
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+key = os.getenv('KEYS')
 
 def encrypted(password:str):
 	f = Fernet(b'0KxMMtDcVQhAY-xvUyOg-VsihKky0nff2kOeq8JmeB0=')
