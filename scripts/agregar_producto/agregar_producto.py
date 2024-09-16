@@ -12,15 +12,15 @@ class AgregarProductoCreate(AgregarProductoDesigner):
 
 	def Add(self):
 		add = Inventary()
-		if not self.nombre_producto.get() == '' and self.serial_producto.get() == '' and self.cantidad_producto.get() == '' and self.precio_producto == '':
-			messagebox.showinfo(
-				message='Los campos estan vacios, por favor rellenanos',title='Error')
-		elif self.nombre_producto.get() == None or self.serial_producto.get() == None:
-			messagebox.showinfo(
-				message='Error, algun campo esta vacio',title='Error')
-		elif self.cantidad_producto.get() == None or self.precio_producto.get() == None:
-			messagebox.showinfo(
-				message='Error, algun cambio esta vacio',title='Error')
+		if self.nombre_producto.get() == '' and self.serial_producto.get() == '' and self.cantidad_producto.get() == '' and self.precio_producto.get() == '':
+			messagebox.showerror(
+				message='Los campos estan vacios, por favor completarlos',title='Error')
+		elif self.nombre_producto.get() == '' or self.serial_producto.get() == '':
+			messagebox.showerror(
+				message='Hay campos vacios, por favor completar los campos',title='Error')
+		elif self.cantidad_producto.get() == "" or self.precio_producto.get() == "":
+			messagebox.showerror(
+				message='Hay campos vacios, por favor completar los campos',title='Error')
 		else:
 			add.name_product = self.nombre_producto.get()
 			add.serial_product = self.serial_producto.get()
