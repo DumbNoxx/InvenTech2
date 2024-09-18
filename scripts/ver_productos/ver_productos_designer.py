@@ -1,3 +1,4 @@
+from persistence.repository.auth_user_repository import AuthUserRepository
 import tkinter as tk
 from tkinter import ttk
 import util.generic as util
@@ -61,8 +62,13 @@ class VerProductosDesigner:
 
 		self.tree = ttk.Treeview(frame_fill, height=10, columns=[f"#{n}" for n in range(1, 4)])
 		self.tree.grid(row=0, column=0)
-		self.tree.heading('#0', text='ID')
-		self.tree.heading('#1', text='Producto')
-		self.tree.heading('#2', text='Inventario')
-		self.tree.heading('#3', text='Precio')
+		self.tree.heading('#0', text='ID',anchor=tk.CENTER)
+		self.tree.heading('#1', text='Producto',anchor=tk.CENTER)
+		self.tree.heading('#2', text='Inventario',anchor=tk.CENTER)
+		self.tree.heading('#3', text='Precio',anchor=tk.CENTER)
+		self.auth_repository = AuthUserRepository()
+		prod:Inventary = self.auth_repository.getProductInInventary()
+		
+		for prods in prod:
+			self.tree.insert('',tk.END,text=prods.id,value=(prods.name_product,prods.inventary_product,prods.price_product))
 		self.ventana.mainloop()
