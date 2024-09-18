@@ -19,10 +19,10 @@ class VerProductosDesigner:
 
 		logo = util.leer_image('./resources/designer/logo.png',(100,100))
 
-		frame_top = tk.Frame(self.ventana,height=20,width=5,bd=0,relief=tk.SOLID,bg='#ec7063')
-		frame_top.pack(side='top',expand=tk.YES,fill=tk.BOTH)
+		self.frame_top = tk.Frame(self.ventana,height=20,width=5,bd=0,relief=tk.SOLID,bg='#ec7063')
+		self.frame_top.pack(side='top',expand=tk.YES,fill=tk.BOTH)
 
-		titulo_ventana = tk.Label(frame_top,text='Ver Productos',bg='#ec7063',fg='black',font=('Dyuthi',30))
+		titulo_ventana = tk.Label(self.frame_top,text='Ver Productos',bg='#ec7063',fg='black',font=('Dyuthi',30))
 		titulo_ventana.pack(expand=tk.YES,fill=tk.BOTH)
 
 		frame_copyright = tk.Frame(titulo_ventana,bd=0,width=200,height=200,bg='#ec7063')
@@ -48,19 +48,19 @@ class VerProductosDesigner:
 		boton_leave = tk.Button(frame_boton,text='Salir',font=('Dyuthi',11),bg='#a93226',fg='black',command=leave)
 		boton_leave.pack()
 
-		texto_principal = tk.Label(frame_top,text='Ingresa el nombre del producto a buscar',font=('Dyuthi',12),bg='#ec7063',fg='black')
+		texto_principal = tk.Label(self.frame_top,text='Ingresa el nombre del producto a buscar',font=('Dyuthi',12),bg='#ec7063',fg='black')
 		texto_principal.pack(expand=tk.YES,fill=tk.BOTH)
 
-		entrada_principal = ttk.Entry(frame_top,font=('Dyuthi',11))
+		entrada_principal = ttk.Entry(self.frame_top,font=('Dyuthi',11))
 		entrada_principal.pack(fill=tk.Y,padx=5,pady=5)
 
-		boton_principal_buscar = tk.Button(frame_top,text='Buscar',bg='#a93226',fg='black',font=('Dyuthi',11))
+		boton_principal_buscar = tk.Button(self.frame_top,text='Buscar',bg='#a93226',fg='black',font=('Dyuthi',11))
 		boton_principal_buscar.pack(fill=tk.Y,padx=5,pady=5)
 
-		frame_fill = tk.Frame(self.ventana,height=20,width=6,bd=0,relief=tk.SOLID,bg='gray')
-		frame_fill.pack(side='bottom',expand=tk.YES,fill=tk.BOTH)
+		self.frame_fill = tk.Frame(self.ventana,height=20,width=6,bd=0,relief=tk.SOLID,bg='gray')
+		self.frame_fill.pack(side='bottom',expand=tk.YES,fill=tk.BOTH)
 
-		self.tree = ttk.Treeview(frame_fill, height=10, columns=[f"#{n}" for n in range(1, 4)])
+		self.tree = ttk.Treeview(self.frame_fill,height=10, columns=[f"#{n}" for n in range(1, 4)])
 		self.tree.grid(row=0, column=0)
 		self.tree.heading('#0', text='ID',anchor=tk.CENTER)
 		self.tree.heading('#1', text='Producto',anchor=tk.CENTER)
@@ -71,4 +71,5 @@ class VerProductosDesigner:
 		
 		for prods in prod:
 			self.tree.insert('',tk.END,text=prods.id,value=(prods.name_product,prods.inventary_product,prods.price_product))
+
 		self.ventana.mainloop()
