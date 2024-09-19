@@ -48,14 +48,15 @@ class VerProductosDesigner:
 		boton_leave = tk.Button(frame_boton,text='Salir',font=('Dyuthi',11),bg='#a93226',fg='black',command=leave)
 		boton_leave.pack()
 
-		texto_principal = tk.Label(self.frame_top,text='Ingresa el nombre del producto a buscar',font=('Dyuthi',12),bg='#ec7063',fg='black')
+		texto_principal = tk.Label(self.frame_top,text='Ingresa el nombre del producto a buscar',font=('Dyuthi',12),bg='#ec7063',fg='black',)
 		texto_principal.pack(expand=tk.YES,fill=tk.BOTH)
 
-		entrada_principal = ttk.Entry(self.frame_top,font=('Dyuthi',11))
-		entrada_principal.pack(fill=tk.Y,padx=5,pady=5)
-
-		boton_principal_buscar = tk.Button(self.frame_top,text='Buscar',bg='#a93226',fg='black',font=('Dyuthi',11))
+		self.entrada_principal = ttk.Entry(self.frame_top,font=('Dyuthi',11))
+		self.entrada_principal.pack(fill=tk.Y,padx=5,pady=5)
+			
+		boton_principal_buscar = tk.Button(self.frame_top,text='Buscar',bg='#a93226',fg='black',font=('Dyuthi',11),command=self.Buscar)
 		boton_principal_buscar.pack(fill=tk.Y,padx=5,pady=5)
+		boton_principal_buscar.bind('<Return>',(lambda event:self.Buscar()))
 
 		self.frame_fill = tk.Frame(self.ventana,height=20,width=6,bd=0,relief=tk.SOLID,bg='gray')
 		self.frame_fill.pack(side='bottom',expand=tk.YES,fill=tk.BOTH)
@@ -70,6 +71,10 @@ class VerProductosDesigner:
 		prod:Inventary = self.auth_repository.getProductInInventary()
 		
 		for prods in prod:
-			self.tree.insert('',tk.END,text=prods.id,value=(prods.name_product,prods.inventary_product,prods.price_product))
+			self.tree.insert('',tk.END,text=prods.id,value=(prods.name_product,f'{prods.inventary_product} unidades',f'{prods.price_product}$'))
 
 		self.ventana.mainloop()
+
+
+def Buscar():
+	pass

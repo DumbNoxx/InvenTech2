@@ -12,4 +12,7 @@ He creado la ventana de agregar producto, ya la he diseñado, ya tiene su aparta
 
 ## Buscar Producto
 He creado la ventana de buscar un producto o ver la lista de productos, aqui sufri un poco con el diseño ya que no soy mucho de hacer Frontend, pero si vamos a darle con todo, todavia no se ha diseñado la parte backend, pronto añadire la parte backend, espero les haya gustado el diseño de la ventana, aunque sufri un poco.
+<p align="center">
+  - <i>Updates</i> Ya agregue funcionalidad(no total) a boton de busqueda donde corrobora si en realidad el producto proporcionado existe en la base de datos, sin embargo me falta todavia agregarle para que seleccione y muestre el solo el producto buscado, pero ya tiene la el boton buscar funcionando.
+</p>
 <img src='/resources/screenshot/screenshot2.png'>

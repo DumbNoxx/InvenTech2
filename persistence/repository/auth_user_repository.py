@@ -31,3 +31,10 @@ class AuthUserRepository():
 			name = session.query(Inventary).all()
 
 		return name
+
+	def SearchInInventary(self,name:str):
+		Product_name:Inventary = None
+		with Session(self.engine) as session:
+			Product_name = session.query(Inventary).filter_by(name_product=name).first()
+
+		return Product_name
