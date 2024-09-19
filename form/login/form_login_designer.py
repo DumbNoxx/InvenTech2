@@ -10,12 +10,6 @@ icon = os.getenv('ICON')
 Logo = os.getenv('LOGO')
 
 class FormLoginDesigner:
-
-	def verificar(self):
-		pass
-	def userRegister(self):
-		pass
-
 	def __init__(self):
 		self.ventana = tk.Tk()
 		self.ventana.title('Inicio de Sesion')
@@ -65,13 +59,17 @@ class FormLoginDesigner:
 		inicio.pack(fill=tk.X,padx=20,pady=20)
 		inicio.bind('<Return>',(lambda event:self.userRegister()))
 
-		def leave():
-			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir?', icon='question', default='no')
-			if resultado == 'yes':
-				self.ventana.destroy()
-
-		inicio = tk.Button(frame_form_fill,text='Salir',font=('Dyuthi',15),bg='#8f68b5',bd=0,fg='black',command=leave)
+		inicio = tk.Button(frame_form_fill,text='Salir',font=('Dyuthi',15),bg='#8f68b5',bd=0,fg='black',command=self.leave)
 		inicio.pack(fill=tk.X,padx=15,pady=15)
+		inicio.bind('<Return>',(lambda event:self.leave()))
+
 		
 		self.ventana.iconphoto(True,icon_1)
 		self.ventana.mainloop()
+
+def verificar():
+	pass
+def userRegister():
+	pass
+def leave():
+	pass

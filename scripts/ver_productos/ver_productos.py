@@ -29,3 +29,8 @@ class VerProductosCreate(VerProductosDesigner):
 			status = False
 			messagebox.showinfo(message=f'Producto "{self.entrada_principal.get()}" no encontrado')
 		return status
+
+	def leave(self):
+			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir de la ventana?', icon='question', default='no')
+			if resultado == 'yes':
+				self.ventana.destroy()

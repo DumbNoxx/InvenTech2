@@ -11,6 +11,11 @@ class FormRegister(FormRegisterDesigner):
 	def __init__(self):
 		self.auth_repository = AuthUserRepository()
 		super().__init__()
+		
+	def leave(self):
+			resultado = messagebox.askquestion("Salir", '¿Estás seguro que quieres salir de la ventana?', icon='question', default='no')
+			if resultado == 'yes':
+				self.ventana.destroy()
 
 
 	def register(self):
@@ -46,5 +51,3 @@ class FormRegister(FormRegisterDesigner):
 			messagebox.showerror(
 				message='El usuario ya existe',title='Error al registrar')
 		return status
-
-

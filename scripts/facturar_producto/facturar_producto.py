@@ -4,3 +4,6 @@ import tkinter as tk
 class FacturarProductCreate(FacturarProductDesginer):
 	def __init__(self):
 		super().__init__()
+
+	def leave(self):
+		self.ventana.destroy()

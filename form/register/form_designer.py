@@ -59,14 +59,15 @@ class FormRegisterDesigner:
 		register.pack(fill=tk.X,padx=10,pady=10)
 		register.bind('<Return>',(lambda event:self.register()))
 		
-		def leave():
-			resultado = messagebox.askquestion("Salir", '¿Estás seguro que quieres salir de la ventana?', icon='question', default='no')
-			if resultado == 'yes':
-				self.ventana.destroy()
-		boton_salir = tk.Button(frame_form_fill,text='Salir',font=('Dyuthi',11),bg='#8f68b5',bd=0,fg='black',command=leave)
+		
+		boton_salir = tk.Button(frame_form_fill,text='Salir',font=('Dyuthi',11),bg='#8f68b5',bd=0,fg='black',command=self.leave)
 		boton_salir.pack(fill=tk.X,padx=10,pady=10)
+		boton_salir.bind('<Return>',(lambda event:self.leave()))
 
+		
 		self.ventana.mainloop()
 
 def register():
+	pass
+def leave():
 	pass

@@ -34,3 +34,7 @@ class AgregarProductoCreate(AgregarProductoDesigner):
 			self.cantidad_producto.delete(0,'end')
 			self.precio_producto.delete(0,'end')
 		
+	def leave(self):
+			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir de la ventana?', icon='question', default='no')
+			if resultado == 'yes':
+				self.ventana.destroy()

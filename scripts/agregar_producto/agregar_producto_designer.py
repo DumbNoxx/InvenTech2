@@ -63,17 +63,15 @@ class AgregarProductoDesigner:
 		boton_agregar.pack(fill=tk.X,padx=20,pady=10)
 		boton_agregar.bind('<Return>',(lambda event:self.Add()))
 
-		def leave():
-			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir de la ventana?', icon='question', default='no')
-			if resultado == 'yes':
-				self.ventana.destroy()
-
-		boton_salir = tk.Button(frame_fill,text='Salir',font=('Dyuthi',12),bg='#f7dc6f',fg='black',command=leave)
+		boton_salir = tk.Button(frame_fill,text='Salir',font=('Dyuthi',12),bg='#f7dc6f',fg='black',command=self.leave)
 		boton_salir.pack(fill=tk.X,padx=10,pady=10)
+		boton_salir.bind('<Return>',(lambda event:self.leave()))
 
 		self.ventana.mainloop()
 
 
 
 def Add():
+	pass
+def leave():
 	pass

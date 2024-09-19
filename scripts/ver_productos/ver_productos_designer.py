@@ -40,13 +40,9 @@ class VerProductosDesigner:
 		frame_boton = tk.Frame(titulo_ventana,bd=1,width=50,height=50,bg='#ec7063')
 		frame_boton.place(x=670,y=10,relwidth=0.2,relheight=0.25)
 
-		def leave():
-			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir de la ventana?', icon='question', default='no')
-			if resultado == 'yes':
-				self.ventana.destroy()
-
-		boton_leave = tk.Button(frame_boton,text='Salir',font=('Dyuthi',11),bg='#a93226',fg='black',command=leave)
+		boton_leave = tk.Button(frame_boton,text='Salir',font=('Dyuthi',11),bg='#a93226',fg='black',command=self.leave)
 		boton_leave.pack()
+		boton_leave.bind('<Return>',(lambda event:self.leave()))
 
 		texto_principal = tk.Label(self.frame_top,text='Ingresa el nombre del producto a buscar',font=('Dyuthi',12),bg='#ec7063',fg='black',)
 		texto_principal.pack(expand=tk.YES,fill=tk.BOTH)
@@ -77,4 +73,7 @@ class VerProductosDesigner:
 
 
 def Buscar():
+	pass
+
+def leave():
 	pass

@@ -13,6 +13,11 @@ class FormLogin(FormLoginDesigner):
 	def __init__(self):
 		self.auth_repository = AuthUserRepository()
 		super().__init__()
+
+	def leave(self):
+			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir?', icon='question', default='no')
+			if resultado == 'yes':
+				self.ventana.destroy()
 		
 	def verificar(self):
 		user_db:Auth_user = self.auth_repository.getUserByUserName(self.usuario.get())
