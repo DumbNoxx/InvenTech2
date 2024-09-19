@@ -62,8 +62,8 @@ class MasterPanel:
 
 		def FacturarProduct():
 			FacturarProductCreate().mainloop()
-
-		boton3 = tk.Button(self.ventana,text='Facturar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=FacturarProduct)
+		#Titulo del boton: Facturar Producto
+		boton3 = tk.Button(self.ventana,text='[En proceso]',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=FacturarProduct)
 		boton3.place(x=780,y=200,relwidth=0.11,relheight=0.07)
 
 		def leave():

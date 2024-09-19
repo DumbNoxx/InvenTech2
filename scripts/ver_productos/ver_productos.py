@@ -20,12 +20,12 @@ class VerProductosCreate(VerProductosDesigner):
 		else:
 			prod:Inventary = self.auth_repository.SearchInInventary(self.entrada_principal.get())
 			if (self.InInventary(prod)):
-				messagebox.showinfo(message=f'Producto {self.entrada_principal.get()} encontrado.')			
+				messagebox.showinfo(message=f'Producto "{self.entrada_principal.get()}" encontrado.')			
 
 
 	def InInventary(self,inventario:Inventary):
 		status:bool = True
 		if (inventario == None):
 			status = False
-			messagebox.showinfo(message=f'Producto {self.entrada_principal.get()} no encontrado')
+			messagebox.showinfo(message=f'Producto "{self.entrada_principal.get()}" no encontrado')
 		return status
