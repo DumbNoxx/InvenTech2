@@ -6,7 +6,7 @@ class FacturarProductDesginer:
 
 	def __init__(self):
 		self.ventana = tk.Toplevel()
-		self.ventana.title('Facturar Producto')
+		'''self.ventana.title('Facturar Producto')'''
 		self.ventana.title('[En proceso]')
 		self.ventana.resizable(width=0,height=0)
 		self.ventana.config(bg='#6BABF5')
