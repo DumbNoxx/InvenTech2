@@ -13,17 +13,17 @@ He creado la ventana de agregar producto, ya la he diseñado, ya tiene su aparta
 ## Buscar Producto
 He creado la ventana de buscar un producto o ver la lista de productos, aqui sufri un poco con el diseño ya que no soy mucho de hacer Frontend, pero si vamos a darle con todo, todavia no se ha diseñado la parte backend, pronto añadire la parte backend, espero les haya gustado el diseño de la ventana, aunque sufri un poco.
 <p align="center">
-  - <li>Updates</li> Ya agregue funcionalidad(no total) a boton de busqueda donde corrobora si en realidad el producto proporcionado existe en la base de datos, sin embargo me falta todavia agregarle para que seleccione y muestre el solo el producto buscado, pero ya tiene la el boton buscar funcionando.
+  <li>Updates</li> Ya agregue funcionalidad(no total) a boton de busqueda donde corrobora si en realidad el producto proporcionado existe en la base de datos, sin embargo me falta todavia agregarle para que seleccione y muestre el solo el producto buscado, pero ya tiene la el boton buscar funcionando.
 </p>
 <img src='/resources/screenshot/screenshot2.png'>
 
 ## General Updates
 <p align="centar">
-  - <li>Update 22-09-2024</li> He agregado una pantalla de carga para cargar el login donde cada vez que cargue el login se inicie la pantalla de carga aunque solo es una ventana, donde se ve mas amigable a la vista del usuario, todavia faltan cositas por agregarle, pero ahi vamos dando, todo.
+  <li>Update 22-09-2024</li> He agregado una pantalla de carga para cargar el login donde cada vez que cargue el login se inicie la pantalla de carga aunque solo es una ventana, donde se ve mas amigable a la vista del usuario, todavia faltan cositas por agregarle, pero ahi vamos dando, todo.
 </p>
 <img src='/resources/screenshot/screenshot3.png'>
 <p align="center">
-  - <li>Update 22-09-2024</li> Tambien he creado una ventana de carga para cuando cargue el inventario a la ventana de ver productos, donde despues de terminar la carga, cargue todos los datos a la lista TreeView de la ventana.
+  <li>Update 22-09-2024</li> Tambien he creado una ventana de carga para cuando cargue el inventario a la ventana de ver productos, donde despues de terminar la carga, cargue todos los datos a la lista TreeView de la ventana.
 </p>
 <img src='/resources/screenshot/screenshot4.png'>
 <img src='/resources/screenshot/screenshot5.png'>
