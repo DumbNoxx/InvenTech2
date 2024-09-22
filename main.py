@@ -8,13 +8,13 @@ import time
 class PantallaCarga:
 	def __init__(self):
 		self.ventana = tk.Tk()
-		self.ventana.title('Cargando InvenTech')
+		self.ventana.title('Cargando Login')
 		self.ventana.resizable(width=0,height=0)
 		util.centrar_ventana(self.ventana,600,300)
 		logo = util.leer_image('./resources/designer/logo.png',(200,200))
 		self.task = 20
 		self.x = 0
-		self.label = tk.Label(self.ventana,text='Cargando InvenTech')
+		self.label = tk.Label(self.ventana,text='Cargando Login de InvenTech')
 		self.label.pack(padx=10,pady=10)
 		self.label1 = tk.Label(self.ventana,image=logo)
 		self.label1.pack(padx=10,pady=10)
