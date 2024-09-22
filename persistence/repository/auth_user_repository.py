@@ -35,6 +35,5 @@ class AuthUserRepository():
 	def SearchInInventary(self,name:str):
 		Product_name:Inventary = None
 		with Session(self.engine) as session:
-			Product_name = session.query(Inventary).filter_by(name_product=name).first()
-
+			Product_name = session.query(Inventary.id,Inventary.name_product,Inventary.inventary_product,Inventary.price_product).filter_by(name_product=name)
 		return Product_name

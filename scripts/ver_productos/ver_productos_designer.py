@@ -4,13 +4,10 @@ from tkinter import ttk
 import util.generic as util
 from tkinter import messagebox
 from persistence.model import Inventary
-from sqlalchemy.orm import Session
-import sqlalchemy as db
 
 class VerProductosDesigner:
 
 	def __init__(self):
-		self.engine = db.create_engine('sqlite:///db/login.sqlite',echo=False,future=True)
 		self.ventana = tk.Toplevel()
 		self.ventana.title('Ver Productos')
 		self.ventana.config(bg='#fcfcfc')
@@ -63,12 +60,7 @@ class VerProductosDesigner:
 		self.tree.heading('#1', text='Producto',anchor=tk.CENTER)
 		self.tree.heading('#2', text='Inventario',anchor=tk.CENTER)
 		self.tree.heading('#3', text='Precio',anchor=tk.CENTER)
-		self.auth_repository = AuthUserRepository()
-		prod:Inventary = self.auth_repository.getProductInInventary()
 		
-		for prods in prod:
-			self.tree.insert('',tk.END,text=prods.id,value=(prods.name_product,f'{prods.inventary_product} unidades',f'{prods.price_product}$'))
-
 		self.ventana.mainloop()
 
 

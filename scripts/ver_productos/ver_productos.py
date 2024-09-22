@@ -6,6 +6,7 @@ from tkinter import ttk
 from sqlalchemy.orm import Session
 import sqlalchemy as db
 from tkinter import messagebox
+from util.barra_progreso import BarraProgresiva
 
 class VerProductosCreate(VerProductosDesigner):
 
@@ -16,11 +17,26 @@ class VerProductosCreate(VerProductosDesigner):
 
 	def Buscar(self):
 		if self.entrada_principal.get() == '':
-			messagebox.showerror(message='El campo esta vacio, no se puedo buscar a la nada',title='Error')
+			BarraProgresiva()
+			self.auth_repository = AuthUserRepository()
+			prod:Inventary = self.auth_repository.getProductInInventary()
+			elen = self.tree.get_children()
+
+			for element in elen:
+				self.tree.delete(element)
+			
+			for prods in prod:
+				self.tree.insert('',tk.END,text=prods.id,value=(prods.name_product,f'{prods.inventary_product} unidades',f'{prods.price_product}$'))
 		else:
-			prod:Inventary = self.auth_repository.SearchInInventary(self.entrada_principal.get())
-			if (self.InInventary(prod)):
-				messagebox.showinfo(message=f'Producto "{self.entrada_principal.get()}" encontrado.')			
+			elen = self.tree.get_children()
+			products = self.auth_repository.SearchInInventary(self.entrada_principal.get())
+			self.entrada_principal.delete(0,tk.END)
+
+			for element in elen:
+				self.tree.delete(element)
+			
+			for produt in products:
+				self.tree.insert('',tk.END,text=produt.id,value=(produt.name_product,f'{produt.inventary_product} unidades',f'{produt.price_product}$'))
 
 
 	def InInventary(self,inventario:Inventary):
