@@ -51,3 +51,6 @@ class FormRegister(FormRegisterDesigner):
 			messagebox.showerror(
 				message='El usuario ya existe',title='Error al registrar')
 		return status
+
+if __name__ == '__main__':
+	FormRegister()

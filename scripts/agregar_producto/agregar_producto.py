@@ -38,3 +38,7 @@ class AgregarProductoCreate(AgregarProductoDesigner):
 			resultado = messagebox.askquestion("Salir", '¿Estás seguro qué deseas salir de la ventana?', icon='question', default='no')
 			if resultado == 'yes':
 				self.ventana.destroy()
+
+
+if __name__ == '__main__':
+	AgregarProductoCreate()

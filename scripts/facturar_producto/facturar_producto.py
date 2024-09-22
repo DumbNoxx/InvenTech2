@@ -7,3 +7,6 @@ class FacturarProductCreate(FacturarProductDesginer):
 
 	def leave(self):
 		self.ventana.destroy()
+
+if __name__ == '__main__':
+	FacturarProductCreate()

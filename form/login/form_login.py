@@ -27,7 +27,7 @@ class FormLogin(FormLoginDesigner):
 
 
 	def userRegister(self):
-		FormRegister().mainloop()
+		FormRegister()
 
 	def isUser(self,user:Auth_user):
 		status:bool = True

@@ -6,6 +6,7 @@ import util.generic as util
 from tkinter import messagebox
 import os
 from dotenv import load_dotenv
+from main import PantallaCarga
 
 #Cargamos el archivo .env
 load_dotenv()
@@ -32,9 +33,9 @@ label.pack()
 
 def iniciar_sesion():
 	ventana_principal.destroy()
-	subprocess.run(['python3','./main.py'])
+	PantallaCarga()
 
-boton = tk.Button(ventana_principal,text='Iniciar Sesion',font=('Dyuthi',14),command=iniciar_sesion)
+boton = tk.Button(ventana_principal,text='Iniciar',font=('Dyuthi',14),command=iniciar_sesion)
 boton.pack(fill=tk.X,padx=15,pady=15)
 
 

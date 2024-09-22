@@ -43,25 +43,25 @@ class MasterPanel:
 
 
 		def calcu():
-			CalculadoraCreate().mainloop()
+			CalculadoraCreate()
 
 		boton = tk.Button(self.ventana,text='Calculadora',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=calcu)
 		boton.place(x=620,y=170,relwidth=0.09,relheight=0.07)
 
 		def product():
-			AgregarProductoCreate().mainloop()
+			AgregarProductoCreate()
 
 		boton1 = tk.Button(self.ventana,text='Agregar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=product)
 		boton1.place(x=450,y=200,relwidth=0.09,relheight=0.07)
 
 		def verProduct():
-			VerProductosCreate().mainloop()
+			VerProductosCreate()
 
 		boton2 = tk.Button(self.ventana,text='Ver lista de productos',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=verProduct)
 		boton2.place(x=400,y=300,relwidth=0.11,relheight=0.07)
 
 		def FacturarProduct():
-			FacturarProductCreate().mainloop()
+			FacturarProductCreate()
 		#Titulo del boton: Facturar Producto
 		boton3 = tk.Button(self.ventana,text='[En proceso]',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=FacturarProduct)
 		boton3.place(x=780,y=200,relwidth=0.11,relheight=0.07)
