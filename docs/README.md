@@ -27,3 +27,7 @@ He creado la ventana de buscar un producto o ver la lista de productos, aqui suf
 </p>
 <img src='/resources/screenshot/screenshot4.png'>
 <img src='/resources/screenshot/screenshot5.png'>
+<p align="center">
+<li>Update 23-09-24</li> He mejorado la ventana de carga donde la barra tiene que cargar al 100% para cargar todos los procesos del login, tambien he mejorado la barra de carga donde carga todos los productos del inventario dependiendo la cantidad de productos que tengas en el inventario, debe cargar todos los productos del mismo, para poder cargar todo el inventario. <br> Aun seguimos dandolo todo, lastimosa mente me toca trabajar hoy tengo que dejar el trabajo por hoy, sin embargo estare diciendo actulizaciones por mi Threads(Tengo bloqueado X en mi pais).
+Saludos y cuidense.
+</p>
