@@ -27,9 +27,9 @@ class PantallaCarga:
 		self.label1.pack(padx=10,pady=10)
 		self.bar = Progressbar(self.ventana,orient=tk.HORIZONTAL,length=350)
 		self.bar.pack(padx=10,pady=10)
-		
+		self.ventana.iconphoto(True,icon_1)
 		while(self.x<self.task):
-			time.sleep(1)
+			time.sleep(0.3)
 			self.bar['value']+=1
 			self.x+=1
 			self.percent = tk.Label(self.ventana,text=f'{int((self.x/self.task)*100)}%',font=('Dyuthi',11))
@@ -39,7 +39,7 @@ class PantallaCarga:
 			time.sleep(0.5)
 			self.ventana.destroy()
 			FormLogin()
-		self.ventana.iconphoto(True,icon_1)
+		
 		self.ventana.mainloop()
 
 
