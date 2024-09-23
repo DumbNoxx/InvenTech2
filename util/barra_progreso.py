@@ -18,7 +18,7 @@ class BarraProgresiva:
 		self.lens = len(self.auth_repository.getProductInInventary())
 		self.task = self.lens
 		self.x = 0
-		self.label = tk.Label(self.ventana,text='Cargando Inventario')
+		self.label = tk.Label(self.ventana,text='Cargando Inventario',font=('Dyuthi',14))
 		self.label.pack(padx=10,pady=10)
 		self.bar = Progressbar(self.ventana,orient=tk.HORIZONTAL,length=350)
 		self.bar.pack(padx=10,pady=10)
@@ -55,7 +55,7 @@ class BarraProgresiva:
 					self.bar['value']=(self.x/(self.task))*100
 
 			
-			self.percent = tk.Label(self.ventana,text=f'{int((self.x/self.task)*100)}%')
+			self.percent = tk.Label(self.ventana,text=f'{int((self.x/self.task)*100)}%',font=('Dyuthi',11))
 			self.percent.place(x=180,y=80)
 			self.ventana.update_idletasks()
 		if self.x == self.task:

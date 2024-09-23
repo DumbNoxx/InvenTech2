@@ -21,7 +21,7 @@ class PantallaCarga:
 		icon_1 = tk.PhotoImage(file=icon)
 		self.task = 100
 		self.x = 0
-		self.label = tk.Label(self.ventana,text='Cargando Login de InvenTech')
+		self.label = tk.Label(self.ventana,text='Cargando Login de InvenTech',font=('Dyuthi',14))
 		self.label.pack(padx=10,pady=10)
 		self.label1 = tk.Label(self.ventana,image=logo)
 		self.label1.pack(padx=10,pady=10)
@@ -32,7 +32,7 @@ class PantallaCarga:
 			time.sleep(1)
 			self.bar['value']+=1
 			self.x+=1
-			self.percent = tk.Label(self.ventana,text=f'{int((self.x/self.task)*100)}%')
+			self.percent = tk.Label(self.ventana,text=f'{int((self.x/self.task)*100)}%',font=('Dyuthi',11))
 			self.percent.place(x=478,y=270)
 			self.ventana.update_idletasks()
 		if self.x == self.task:
