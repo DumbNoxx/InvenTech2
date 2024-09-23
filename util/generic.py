@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from PIL import Image, ImageTk
 
 def leer_image(path,size):

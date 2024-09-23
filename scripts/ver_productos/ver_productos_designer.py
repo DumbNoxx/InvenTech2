@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from persistence.repository.auth_user_repository import AuthUserRepository
 import tkinter as tk
 from tkinter import ttk
@@ -12,7 +13,7 @@ class VerProductosDesigner:
 		self.ventana.title('Ver Productos')
 		self.ventana.config(bg='#fcfcfc')
 		self.ventana.resizable(width=0,height=0)
-		util.centrar_ventana(self.ventana,800,400)
+		util.centrar_ventana(self.ventana,800,415)
 
 		logo = util.leer_image('./resources/designer/logo.png',(100,100))
 

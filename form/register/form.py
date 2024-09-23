@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from form.register.form_designer import FormRegisterDesigner
 from persistence.repository.auth_user_repository import AuthUserRepository
 from persistence.model import Auth_user

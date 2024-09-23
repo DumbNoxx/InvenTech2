@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from cryptography.fernet import Fernet
 import os
 import os

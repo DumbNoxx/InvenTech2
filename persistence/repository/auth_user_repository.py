@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sqlalchemy as db
 from persistence.model import Auth_user,Inventary
 from sqlalchemy.orm import Session

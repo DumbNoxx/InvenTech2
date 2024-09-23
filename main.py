@@ -1,9 +1,15 @@
+#!/usr/bin/env python3
 from form.login.form_login import FormLogin
 from tkinter import *
 from tkinter.ttk import *
 import tkinter as tk
 import util.generic as util
+import os
+from dotenv import load_dotenv
 import time
+
+load_dotenv()
+icon = os.getenv('ICON')
 
 class PantallaCarga:
 	def __init__(self):
@@ -12,7 +18,8 @@ class PantallaCarga:
 		self.ventana.resizable(width=0,height=0)
 		util.centrar_ventana(self.ventana,600,300)
 		logo = util.leer_image('./resources/designer/logo.png',(200,200))
-		self.task = 20
+		icon_1 = tk.PhotoImage(file=icon)
+		self.task = 100
 		self.x = 0
 		self.label = tk.Label(self.ventana,text='Cargando Login de InvenTech')
 		self.label.pack(padx=10,pady=10)
@@ -20,15 +27,19 @@ class PantallaCarga:
 		self.label1.pack(padx=10,pady=10)
 		self.bar = Progressbar(self.ventana,orient=tk.HORIZONTAL,length=350)
 		self.bar.pack(padx=10,pady=10)
+		
 		while(self.x<self.task):
 			time.sleep(1)
-			self.bar['value']+=5
+			self.bar['value']+=1
 			self.x+=1
+			self.percent = tk.Label(self.ventana,text=f'{int((self.x/self.task)*100)}%')
+			self.percent.place(x=478,y=270)
 			self.ventana.update_idletasks()
 		if self.x == self.task:
 			time.sleep(0.5)
 			self.ventana.destroy()
 			FormLogin()
+		self.ventana.iconphoto(True,icon_1)
 		self.ventana.mainloop()
 
 

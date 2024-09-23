@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from scripts.ver_productos.ver_productos_designer import VerProductosDesigner
 from persistence.repository.auth_user_repository import AuthUserRepository
 from persistence.model import Inventary

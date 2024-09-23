@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from tkinter import *
 import tkinter as tk
 import util.generic as util

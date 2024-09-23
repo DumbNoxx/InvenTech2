@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from scripts.facturar_producto.facturar_producto_designer import FacturarProductDesginer
 import tkinter as tk
 

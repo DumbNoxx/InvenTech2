@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sqlalchemy as db
 import persistence.model as mod
 

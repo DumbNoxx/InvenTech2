@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from scripts.agregar_producto.agregar_producto_designer import AgregarProductoDesigner
 from persistence.repository.auth_user_repository import AuthUserRepository
 from persistence.model import Inventary
