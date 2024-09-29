@@ -26,10 +26,10 @@ class MasterPanel:
 		self.ventana.geometry("%dx%d+0+0" % (w,h))
 		self.ventana.config(bg='#09ab53')
 		self.ventana.resizable(width=0,height=0)
-		icon_1 = tk.PhotoImage(file=icon)
+		icon_1 = tk.PhotoImage(file='./resources/icons.ico')
 
 
-		logo = util.leer_image(Logo,(350,350))
+		logo = util.leer_image('./resources/logotipo.png',(350,350))
 
 		label1 = tk.Label(self.ventana,image=logo,bg='#1abc9c')
 		label1.place(x=0,y=0,relwidth=1,relheight=1)

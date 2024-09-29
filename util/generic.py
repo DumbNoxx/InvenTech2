@@ -2,7 +2,7 @@
 from PIL import Image, ImageTk
 
 def leer_image(path,size):
-	return ImageTk.PhotoImage(Image.open(path).resize(size,Image.ANTIALIAS))
+	return ImageTk.PhotoImage(Image.open(path).resize(size,Image.Resampling.LANCZOS))
 
 
 def centrar_ventana(ventana,aplicacion_ancho,aplicacion_largo):

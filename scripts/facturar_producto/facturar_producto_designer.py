@@ -21,7 +21,7 @@ class FacturarProductDesginer:
 								frame_fill = tk.Frame(self.ventana,bd=0,width=200,relief=tk.SOLID,padx=5,pady=5,bg='#6BABF5')
 								frame_fill.pack(side='bottom',expand=tk.YES,fill=tk.BOTH)
 						'''
-		logo = util.leer_image('./resources/designer/notfound.png',(150,150))
+		logo = util.leer_image('./resources/notfounds.png',(150,150))
 
 		frame_logo = tk.Frame(self.ventana,bd=0,width=200,height=200,relief=tk.SOLID,padx=5,pady=5,bg='#fcfcfc')
 		frame_logo.pack(side='top',expand=True,fill=tk.BOTH)
@@ -32,7 +32,7 @@ class FacturarProductDesginer:
 		label = tk.Label(frame_logo,image=logo,bg='#fcfcfc')
 		label.place(x=0,y=0,relwidth=1,relheight=1)
 
-		flecha = util.leer_image('./resources/designer/flecha.png',(100,100))
+		flecha = util.leer_image('./resources/designers/flechas.png',(100,100))
 		frame_fill = tk.Frame(self.ventana,bd=0,width=200,height=200,relief=tk.SOLID,padx=5,pady=5,bg='#fcfcfc')
 		frame_fill.pack(side='bottom',expand=True,fill=tk.BOTH)
 		label1 = tk.Label(frame_fill,image=flecha,bg='#fcfcfc')

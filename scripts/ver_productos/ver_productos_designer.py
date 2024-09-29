@@ -15,7 +15,7 @@ class VerProductosDesigner:
 		self.ventana.resizable(width=0,height=0)
 		util.centrar_ventana(self.ventana,800,415)
 
-		logo = util.leer_image('./resources/designer/logo.png',(100,100))
+		logo = util.leer_image('./resources/logotipo.png',(100,100))
 
 		self.frame_top = tk.Frame(self.ventana,height=20,width=5,bd=0,relief=tk.SOLID,bg='#ec7063')
 		self.frame_top.pack(side='top',expand=tk.YES,fill=tk.BOTH)

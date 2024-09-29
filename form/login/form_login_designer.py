@@ -18,10 +18,10 @@ class FormLoginDesigner:
 		self.ventana.config(bg='#fcfcfc')
 		self.ventana.resizable(width=0,height=0)
 		util.centrar_ventana(self.ventana,800,500)
-		icon_1 = tk.PhotoImage(file=icon)
+		icon_1 = tk.PhotoImage(file='./resources/icons.ico')
 		
 
-		logo = util.leer_image(Logo,(200,200))
+		logo = util.leer_image('./resources/logotipo.png',(200,200))
 
 		frame_logo = tk.Frame(self.ventana,bd=0,width=300,relief=tk.SOLID,padx=10,pady=10,bg='#abb2b9')
 		frame_logo.pack(side='left',expand=tk.NO,fill=tk.BOTH)

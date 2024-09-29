@@ -17,8 +17,8 @@ class PantallaCarga:
 		self.ventana.title('Cargando Login')
 		self.ventana.resizable(width=0,height=0)
 		util.centrar_ventana(self.ventana,600,300)
-		logo = util.leer_image('./resources/designer/logo.png',(200,200))
-		icon_1 = tk.PhotoImage(file=icon)
+		logo = util.leer_image('./resources/logotipo.png',(200,200))
+		icon_1 = tk.PhotoImage(file='./resources/icons.ico')
 		self.task = 100
 		self.x = 0
 		self.label = tk.Label(self.ventana,text='Cargando Login de InvenTech',font=('Dyuthi',14))

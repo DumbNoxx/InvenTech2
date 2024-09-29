@@ -6,22 +6,16 @@ from tkinter import font
 import subprocess
 import util.generic as util
 from tkinter import messagebox
-import os
-from dotenv import load_dotenv
-from main import PantallaCarga
 
-#Cargamos el archivo .env
-load_dotenv()
-icon = os.getenv('ICON')
-Logo = os.getenv('LOGO')
+from main import PantallaCarga
 
 ventana_principal = tk.Tk()
 util.centrar_ventana(ventana_principal,600,470)
 ventana_principal.title('InvenTech Ventana Principal')
 ventana_principal.resizable(width=0,height=0)
-logo = util.leer_image(Logo,(190,110))
+logo = util.leer_image('./logotipo.png',(190,110))
 
-icon_1 = tk.PhotoImage(file=icon)
+icon_1 = tk.PhotoImage(file='./icons.ico')
 
 label = tk.Label(ventana_principal,text='Bienvenido a InvenTech',font=('Dyuthi',14))
 label.pack(pady=30)
@@ -63,4 +57,5 @@ label_logo = tk.Button(frame_logo,image=logo,command=saludo)
 label_logo.place(x=0,y=0,relwidth=1,relheight=1)
 
 ventana_principal.iconphoto(True,icon_1)
+
 ventana_principal.mainloop()

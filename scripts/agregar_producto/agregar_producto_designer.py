@@ -15,7 +15,7 @@ class AgregarProductoDesigner:
 		self.ventana.config(bg='#fad7a0')
 		self.ventana.resizable(width=0,height=0)
 
-		logo = util.leer_image('./resources/designer/logo.png',(200,200))
+		logo = util.leer_image('./resources/logotipo.png',(200,200))
 
 		frame_logo = tk.Frame(self.ventana,bd=0,width=200,relief=tk.SOLID,padx=5,pady=5,bg='#f7dc6f')
 		frame_logo.pack(side='left',expand=False,fill=tk.BOTH)
