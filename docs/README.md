@@ -6,7 +6,7 @@
 </p>
 <img src='/resources/screenshot/screenshot3.png'>
 <p align="center">
-  <li>Update 22-09-2024</li> Tambien he creado una ventana de carga para cuando cargue el inventario a la ventana de ver productos, donde despues de terminar la carga, cargue todos los datos a la lista TreeView de la ventana.
+  Tambien he creado una ventana de carga para cuando cargue el inventario a la ventana de ver productos, donde despues de terminar la carga, cargue todos los datos a la lista TreeView de la ventana.
 </p>
 <img src='/resources/screenshot/screenshot4.png'>
 <img src='/resources/screenshot/screenshot5.png'>
