@@ -46,7 +46,7 @@ class FacturarProductDesginer:
 
 		self.leave = tk.Button(frame_fill,text='Salir',bg='#6BABF5',fg='black',font=('Dyuthi',14),command=self.leave)
 		self.leave.pack(fill=tk.Y,padx=4,pady=4)
-		self.leave.bind('<Retunr>',(lambda event:self.leave()))
+		self.leave.bind('<Return>',(lambda event:self.leave()))
 
 		self.ventana.mainloop()
 
