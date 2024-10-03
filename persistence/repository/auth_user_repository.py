@@ -17,6 +17,13 @@ class AuthUserRepository():
 		return user
 
 
+	def getUserByUserNameInDataBase(self):
+		user:Auth_user = None
+		with Session(self.engine) as session:
+			user = session.query(Auth_user.username).filter_by().all()
+
+		return user
+
 	def insertUser(self,user:Auth_user):
 		with Session(self.engine) as session:
 			session.add(user)

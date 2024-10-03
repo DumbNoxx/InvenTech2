@@ -24,8 +24,9 @@ class FormLogin(FormLoginDesigner):
 		user_db:Auth_user = self.auth_repository.getUserByUserName(self.usuario.get())
 		if(self.isUser(user_db)):
 			self.isPassword(self.password.get(),user_db)
-			
-
+	def nombre(self):
+		user_db:Auth_user = self.auth_repository.getUserByUserName(self.usuario.get())
+		return user_db
 
 	def userRegister(self):
 		FormRegister()

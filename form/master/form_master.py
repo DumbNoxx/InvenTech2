@@ -9,6 +9,8 @@ from scripts.agregar_producto.agregar_producto import AgregarProductoCreate
 from scripts.ver_productos.ver_productos import VerProductosCreate
 from scripts.facturar_producto.facturar_producto import FacturarProductCreate
 import subprocess
+from persistence.repository.auth_user_repository import AuthUserRepository
+from persistence.model import Auth_user
 from tkinter import messagebox
 
 
@@ -20,6 +22,8 @@ icon = os.getenv('ICON')
 
 class MasterPanel:
 	def __init__(self):
+		self.auth_repository = AuthUserRepository()
+
 		self.ventana = tk.Tk()
 		self.ventana.title('InvenTech')
 		w,h = self.ventana.winfo_screenwidth(),self.ventana.winfo_screenheight()
@@ -28,6 +32,7 @@ class MasterPanel:
 		self.ventana.resizable(width=0,height=0)
 		icon_1 = tk.PhotoImage(file='./resources/icons.ico')
 
+	
 
 		logo = util.leer_image('./resources/logotipo.png',(350,350))
 
