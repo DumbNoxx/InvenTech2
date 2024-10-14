@@ -4,8 +4,6 @@ from persistence.repository.auth_user_repository import AuthUserRepository
 from persistence.model import Inventary
 import tkinter as tk
 from tkinter import ttk
-from sqlalchemy.orm import Session
-import sqlalchemy as db
 from tkinter import messagebox
 from util.barra_progreso import BarraProgresiva
 

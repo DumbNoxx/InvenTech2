@@ -41,8 +41,9 @@ class FacturarProductDesginer:
 		self.entrada2 = ttk.Entry(frame_fill,font=('Dyuthi',16))
 		self.entrada2.pack(fill=tk.Y,padx=4,pady=4)
 
-		self.boton_facturar = tk.Button(frame_fill,text='Facturar',bg='#6BABF5',fg='black',font=('Dyuthi',14))
+		self.boton_facturar = tk.Button(frame_fill,text='Facturar',bg='#6BABF5',fg='black',font=('Dyuthi',14),command=self.facturar)
 		self.boton_facturar.pack(fill=tk.Y,padx=4,pady=4)
+		self.boton_facturar.bind('<Return>',(lambda event:self.facturar()))
 
 		self.leave = tk.Button(frame_fill,text='Salir',bg='#6BABF5',fg='black',font=('Dyuthi',14),command=self.leave)
 		self.leave.pack(fill=tk.Y,padx=4,pady=4)
@@ -52,4 +53,7 @@ class FacturarProductDesginer:
 
 
 def leave():
+	pass
+
+def facturar():
 	pass
