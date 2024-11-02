@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 from scripts.calculadora.calculadora import CalculadoraCreate
 from scripts.agregar_producto.agregar_producto import AgregarProductoCreate
 from scripts.ver_productos.ver_productos import VerProductosCreate
-from scripts.facturar_producto.facturar_producto import FacturarProductCreate
 import subprocess
 from persistence.repository.auth_user_repository import AuthUserRepository
 from persistence.model import Auth_user
@@ -66,10 +65,10 @@ class MasterPanel:
 		boton2 = tk.Button(self.ventana,text='Ver lista de productos',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=verProduct)
 		boton2.place(x=400,y=300,relwidth=0.11,relheight=0.07)
 
-		def FacturarProduct():
-			FacturarProductCreate()
+		def juegos():
+			pass
 		#Titulo del boton: Facturar Producto
-		boton3 = tk.Button(self.ventana,text='[En proceso]',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=FacturarProduct)
+		boton3 = tk.Button(self.ventana,text='Ni idea',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=juegos)
 		boton3.place(x=780,y=200,relwidth=0.11,relheight=0.07)
 
 		def leave():
