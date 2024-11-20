@@ -8,8 +8,6 @@ import os
 from dotenv import load_dotenv
 import time
 
-load_dotenv()
-icon = os.getenv('ICON')
 
 class PantallaCarga:
 	def __init__(self):

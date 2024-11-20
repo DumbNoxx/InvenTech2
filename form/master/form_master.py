@@ -3,20 +3,14 @@ import tkinter as tk
 from tkinter.font import BOLD
 import util.generic as util
 import os
-from dotenv import load_dotenv
 from scripts.calculadora.calculadora import CalculadoraCreate
 from scripts.agregar_producto.agregar_producto import AgregarProductoCreate
 from scripts.ver_productos.ver_productos import VerProductosCreate
+import main
 import subprocess
 from persistence.repository.auth_user_repository import AuthUserRepository
 from persistence.model import Auth_user
 from tkinter import messagebox
-
-
-load_dotenv()
-Logo = os.getenv('LOGO')
-Login = os.getenv('LOGIN')
-icon = os.getenv('ICON')
 
 
 class MasterPanel:
@@ -75,7 +69,7 @@ class MasterPanel:
 			resultado = messagebox.askquestion("Salir", '¿Estás seguro que quieres cerrar sesión?', icon='question', default='no')
 			if resultado == 'yes':
 				self.ventana.destroy()
-				subprocess.run(['python3',Login])
+				main.PantallaCarga()
 
 		cerrar_sesion = tk.Button(self.ventana,text='Cerrar Sesion',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=leave)
 		cerrar_sesion.place(x=10,y=600,relwidth=0.09,relheight=0.07)
