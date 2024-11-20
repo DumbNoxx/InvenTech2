@@ -7,6 +7,7 @@ from tkinter import ttk
 from tkinter import messagebox
 from util.barra_progreso import BarraProgresiva
 
+
 class VerProductosCreate(VerProductosDesigner):
 
 	def __init__(self):
