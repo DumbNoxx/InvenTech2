@@ -3,10 +3,8 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import font
-import subprocess
 import util.generic as util
 from tkinter import messagebox
-
 from main import PantallaCarga
 
 ventana_principal = tk.Tk()
