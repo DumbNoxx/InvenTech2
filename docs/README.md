@@ -25,4 +25,4 @@ Saludos y cuidense.
 <p text='align'>
   <li>Update 24-11-24</li> He agregado otro framework para poder customizar mas la aplicacion, donde podre mejorar la interfaz y mejorare todo para que se vea mejor la interfaz de usuario, hasta ahora he hecho lo de la imagen de abajo, tambien he arreglado el bug de las ventana que salian sin orden alguno, ahora ya no sale maximizada por defecto, si no que se podra maximizar al gusto, muchas gracias a Mapache(es su nick) por su colaboracion por ser el diseñador, que se esta encargando de todo el diseño de la app, y muchas gracias a Mawffu(tambien es su nick), por haber reportado el bug de la resolucion que estaba presente en la beta del release. 
 </p>
-<img src='./resources/screenshot/screenshot8.png'>
+<img src='/resources/screenshot/screenshot8.png'>
