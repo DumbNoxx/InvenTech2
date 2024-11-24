@@ -12,6 +12,7 @@ import subprocess
 from persistence.repository.auth_user_repository import AuthUserRepository
 from persistence.model import Auth_user
 from tkinter import messagebox
+import customtkinter as ct
 
 
 class MasterPanel:
@@ -45,7 +46,7 @@ class MasterPanel:
 		def calcu():
 			CalculadoraCreate()
 
-		boton = tk.Button(self.ventana,text='Calculadora',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=calcu)
+		boton = ct.CTkButton(self.ventana,text='Calculadora',bg_color='#a3e4d7',fg_color='black',command=calcu)
 		boton.place(relx=0.45,rely=0.23,relwidth=0.09,relheight=0.07)
 
 		def product():
