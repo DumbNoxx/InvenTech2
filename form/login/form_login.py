@@ -9,6 +9,7 @@ from persistence.model import Auth_user
 import util.encoding_uncoding as end_dec
 from persistence.repository.auth_user_repository import AuthUserRepository
 from form.register.form import FormRegister
+from form.admin.admin_window import AdminWindow
 
 class FormLogin(FormLoginDesigner):
 	def __init__(self):
@@ -22,12 +23,13 @@ class FormLogin(FormLoginDesigner):
 		
 	def verificar(self):
 		user_db:Auth_user = self.auth_repository.getUserByUserName(self.usuario.get())
-		if(self.isUser(user_db)):
-			self.isPassword(self.password.get(),user_db)
-	def nombre(self):
-		user_db:Auth_user = self.auth_repository.getUserByUserName(self.usuario.get())
-		return user_db
 
+		if(self.usuario.get() == 'admin' and self.password.get() == 'dylan'):
+			self.ventana.destroy()
+			AdminWindow()
+		elif(self.isUser(user_db)):
+			self.isPassword(self.password.get(),user_db)
+			
 	def userRegister(self):
 		FormRegister()
 
