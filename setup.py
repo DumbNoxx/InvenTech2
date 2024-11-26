@@ -7,12 +7,15 @@ import util.generic as util
 from tkinter import messagebox
 from main import PantallaCarga
 import customtkinter as ct
+from PIL import Image
 
 ventana_principal = tk.Tk()
 util.centrar_ventana(ventana_principal,600,470)
 ventana_principal.title('InvenTech Ventana Principal')
 ventana_principal.resizable(width=0,height=0)
-logo = util.leer_image('./logotipo2.png',(600,230))
+my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework.png"),
+                                  dark_image=Image.open("./resources/Icono_Rework.png"),
+                                  size=(600,230))
 ventana_principal.config(bg='#222831')
 
 icon_1 = tk.PhotoImage(file='./icons.ico')
@@ -54,7 +57,7 @@ copyright.pack()
 def saludo():
     messagebox.showinfo(message='Gracias por usar la app <3',title='Gratidud')
 
-label_logo = ct.CTkButton(frame_logo,text='',image=logo,fg_color='transparent',bg_color='#222831',command=saludo)
+label_logo = ct.CTkButton(frame_logo,text='',image=my_image,fg_color='transparent',bg_color='#222831',command=saludo)
 label_logo.place(x=0,y=0,relwidth=1,relheight=1)
 
 ventana_principal.iconphoto(True,icon_1)

@@ -22,7 +22,12 @@ Saludos y cuidense.
   <li>Update 23-11-24</li> He modificado algunas cosas, un usuario me dijo que tenia un bug de resolucion, asi que lo estoy arreglando, sin embargo, ya hay un release que estare actualizando con la version mas reciente para que puedan probar las funcionalidades de la misma, he quitado la ventana de facturar un producto, por que estoy pensando en otras cositas, pero con tiempo y paciencia todo se lleva a cabo, vamos a ver, he quedado con un amigo para que me haga los diseños y poder implementalos a la ventana, tambien hare un panel admin para los administradores o en su caso el dueño puedan ver funcionalidades de la misma. Tambien he actualizado los requirements, tal vez no sean los mas recientes pero mientras este actualizando y siga funcionando todo va a estar bien. 
 </p>
 <img src='/resources/screenshot/screenshot7.png'>
-<p text='align'>
-  <li>Update 24-11-24</li> He agregado otro framework para poder customizar mas la aplicacion, donde podre mejorar la interfaz y mejorare todo para que se vea mejor la interfaz de usuario, hasta ahora he hecho lo de la imagen de abajo, tambien he arreglado el bug de las ventana que salian sin orden alguno, ahora ya no sale maximizada por defecto, si no que se podra maximizar al gusto, muchas gracias a Mapache(es su nick) por su colaboracion por ser el diseñador, que se esta encargando de todo el diseño de la app, y muchas gracias a Mawffu(tambien es su nick), por haber reportado el bug de la resolucion que estaba presente en la beta del release. 
+<p align='center'>
+  <li>Update 24-11-24</li> He agregado otro framework para poder customizar mas la aplicacion, donde podre mejorar la interfaz y mejorare todo para que se vea mejor la interfaz de usuario, hasta ahora he hecho lo de la imagen de abajo, tambien he arreglado el bug de las ventana que salian sin orden alguno, ahora ya no sale maximizada por defecto, si no que se podra maximizar al gusto, muchas gracias a Mapache(es su nick) por su colaboracion por ser el diseñador, que se esta encargando de todo el diseño de la app, y muchas gracias a Mawffy(tambien es su nick), por haber reportado el bug de la resolucion que estaba presente en la beta del release. 
 </p>
 <img src='/resources/screenshot/screenshot8.png'>
+<p align='center'>
+  <li>Update 26-11-24</li> Ya he tocado el login y la pantalla de carga, aunque no esta terminado, ya que le falta agregarle el nuevo logo, esta quedando de la siguiente manera...
+  <img src='/resources/screenshot/screenshot9.png'>
+  <img src='/resources/screenshot/screenshot10.png'>
+  Donde me gusta mucho esas ventanas, lastimosa mente, no puedo seguir por ahora porque me tengo que ir a trabajar, pero mañana es mi dia libre, asi que podre estar la mayoria del tiempo dedicado a InvenTech, espero le guste y recuerden seguirme en <a href='https://www.threads.net/@dumb.nox?hl=es'>Threads</a>
