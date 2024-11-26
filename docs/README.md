@@ -30,4 +30,5 @@ Saludos y cuidense.
   <li>Update 26-11-24</li> Ya he tocado el login y la pantalla de carga, aunque no esta terminado, ya que le falta agregarle el nuevo logo, esta quedando de la siguiente manera...
   <img src='/resources/screenshot/screenshot9.png'>
   <img src='/resources/screenshot/screenshot10.png'>
-  Donde me gusta mucho esas ventanas, lastimosa mente, no puedo seguir por ahora porque me tengo que ir a trabajar, pero mañana es mi dia libre, asi que podre estar la mayoria del tiempo dedicado a InvenTech, espero le guste y recuerden seguirme en <a href='https://www.threads.net/@dumb.nox?hl=es'>Threads</a>
+  Donde me gusta mucho esas ventanas, lastimosa mente, no puedo seguir por ahora porque me tengo que ir a trabajar, pero mañana es mi dia libre, asi que podre estar la mayoria del tiempo dedicado a InvenTech, espero le guste y recuerden seguirme en <a href='https://www.threads.net/@dumb.nox?hl=es'>Threads</a> para saber las nuevas ideas que se me ocurren para la app(en mi pais esta bloqueado el twitter), asi vemos como va mejorando la app si no tienen github o si no quieren seguirme en github. <3
+</p>
