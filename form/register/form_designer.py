@@ -21,7 +21,10 @@ class FormRegisterDesigner:
 
 		
 
-		logo = util.leer_image('./resources/logotipo.png',(200,200))
+	my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework-transformed.png"),
+		dark_image=Image.open("./resources/Icono_Rework-transformed.png"),
+		size=(600,250))
+
 
 		frame_logo = tk.Frame(self.ventana,bd=0,width=300,relief=tk.SOLID,padx=10,pady=10,bg='#78c2e2')
 		frame_logo.pack(side='left',expand=tk.NO,fill=tk.BOTH)

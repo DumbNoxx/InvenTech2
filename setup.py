@@ -13,8 +13,8 @@ ventana_principal = tk.Tk()
 util.centrar_ventana(ventana_principal,600,470)
 ventana_principal.title('InvenTech Ventana Principal')
 ventana_principal.resizable(width=0,height=0)
-my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework.png"),
-                                  dark_image=Image.open("./resources/Icono_Rework.png"),
+my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework-transformed.png"),
+                                  dark_image=Image.open("./resources/Icono_Rework-transformed.png"),
                                   size=(600,230))
 ventana_principal.config(bg='#222831')
 
@@ -35,8 +35,8 @@ def iniciar_sesion():
 	ventana_principal.destroy()
 	PantallaCarga()
 
-boton = ct.CTkButton(ventana_principal,text='Iniciar',fg_color='#31363F',command=iniciar_sesion)
-boton.pack(fill=tk.X,padx=15,pady=15)
+boton = ct.CTkButton(ventana_principal,text='Iniciar',fg_color='#31363F',font=('Dyuthi',16),command=iniciar_sesion)
+boton.pack(fill=tk.X,padx=15,pady=10)
 
 
 def leave():
@@ -44,21 +44,16 @@ def leave():
 	if resultado == 'yes':
 		ventana_principal.destroy()
 
-boton = ct.CTkButton(ventana_principal,text='Salir',font=('Dyuthi',14),fg_color='#31363F',bg_color='#31363F',command=leave)
-boton.pack(fill=tk.X,padx=15,pady=15)
+boton = ct.CTkButton(ventana_principal,text='Salir',font=('Dyuthi',16),fg_color='#31363F',bg_color='#31363F',command=leave)
+boton.pack(fill=tk.X,padx=15,pady=10)
 
 frame_fill = tk.Frame(ventana_principal,height=20,width=5,bd=0,relief=tk.SOLID,bg='#222831')
 frame_fill.pack(side='bottom',expand=tk.YES,fill=tk.BOTH)
-frame_logo = tk.Frame(frame_fill,bd=1,width=100,height=100,bg='#222831')
-frame_logo.pack(expand=tk.YES,fill=tk.BOTH)
 copyright = ct.CTkLabel(frame_fill,text='Nox Corporations ©',font=('Dyuthi',10),bg_color='#222831',fg_color='#222831',text_color='#EEEEEE')
 copyright.pack()
 
-def saludo():
-    messagebox.showinfo(message='Gracias por usar la app <3',title='Gratidud')
-
-label_logo = ct.CTkButton(frame_logo,text='',image=my_image,fg_color='transparent',bg_color='#222831',command=saludo)
-label_logo.place(x=0,y=0,relwidth=1,relheight=1)
+label_logo = ct.CTkLabel(frame_fill,text='',image=my_image,fg_color='transparent',bg_color='#222831')
+label_logo.pack(padx=0.01,pady=0.01)
 
 ventana_principal.iconphoto(True,icon_1)
 
