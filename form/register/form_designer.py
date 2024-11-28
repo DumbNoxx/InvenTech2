@@ -7,6 +7,7 @@ import os
 from dotenv import load_dotenv
 from tkinter import messagebox
 import customtkinter as ct
+from PIL import Image
 
 load_dotenv()
 icon = os.getenv('ICON')
@@ -27,12 +28,6 @@ class FormRegisterDesigner:
 			dark_image=Image.open("./resources/Icono_Rework-transformed.png"),
 			size=(600,250))
 
-
-		frame_logo = tk.Frame(self.ventana,bd=0,width=300,relief=tk.SOLID,padx=10,pady=10,bg='#78c2e2')
-		frame_logo.pack(side='left',expand=tk.NO,fill=tk.BOTH)
-		label = tk.Label(frame_logo,image=logo,bg='#78c2e2')
-		label.place(x=0,y=0,relwidth=1,relheight=1)
-
 		frame_form = tk.Frame(self.ventana,bd=0,relief=tk.SOLID,bg='#afaeb0')
 		frame_form.pack(side='right',expand=tk.YES,fill=tk.BOTH)
 
@@ -46,16 +41,20 @@ class FormRegisterDesigner:
 
 		etiqueta_usuario = tk.Label(frame_form_fill,text='Usuario',font=('Dyuthi',14),fg='black',bg='#afaeb0',anchor='w')
 		etiqueta_usuario.pack(fill=tk.X,padx=20,pady=5)
+
 		self.usuario = ttk.Entry(frame_form_fill,font=('Dyuthi',14))
 		self.usuario.pack(fill=tk.X,padx=20,pady=10)
+
 		etiqueta_password = tk.Label(frame_form_fill,text='Contraseña',font=('Dyuthi',14),fg='black',bg='#afaeb0',anchor='w')
 		etiqueta_password.pack(fill=tk.X,padx=20,pady=5)
+
 		self.password = ttk.Entry(frame_form_fill,font=('Dyuthi',14))
 		self.password.pack(fill=tk.X,padx=20,pady=10)
 		self.password.config(show='*')
 
 		etiqueta_confirmation = tk.Label(frame_form_fill,text='Repetir Contraseña',font=('Dyuthi',14),fg='black',bg='#afaeb0',anchor='w')
 		etiqueta_confirmation.pack(fill=tk.X,padx=20,pady=5)
+		
 		self.confirmation = ttk.Entry(frame_form_fill,font=('Dyuthi',14))
 		self.confirmation.pack(fill=tk.X,padx=20,pady=10)
 		self.confirmation.config(show='*')

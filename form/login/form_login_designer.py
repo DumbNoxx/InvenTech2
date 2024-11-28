@@ -24,7 +24,7 @@ class FormLoginDesigner:
 
 		my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework-transformed.png"),
                                   dark_image=Image.open("./resources/Icono_Rework-transformed.png"),
-                                  size=(600,250))
+                                  size=(670,350))
 
 		frame_form_top = tk.Frame(self.ventana,height=50,bd=0,relief=tk.SOLID,bg='#222831')
 		frame_form_top.pack(side='top',fill=tk.BOTH,expand=tk.YES)
@@ -33,7 +33,7 @@ class FormLoginDesigner:
 		title.pack(padx=10,pady=1)
 
 		label = ct.CTkLabel(frame_form_top,text='',image=my_image,bg_color='#222831')
-		label.pack(padx=1,pady=1)
+		label.place(relx=0.07,rely=0.16)
 
 		self.usuario = ct.CTkEntry(frame_form_top, placeholder_text="Usuario",font=('Dyuthi',14),width=300,height=30)
 		self.usuario.place(x=250,y=280)
