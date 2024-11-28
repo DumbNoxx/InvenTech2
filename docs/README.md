@@ -35,4 +35,4 @@ Saludos y cuidense.
 <p align='center'>
   <li>Update 27-11-24</li> He terminado de rediseñar la ventana de Login(sin embargo siento que le falta algo pero no se que), ahora me pondre con la ventana de registrar usuario. 
 </p>
-<img src='/resources/screenshot/screenshot11.png'
+<img src='/resources/screenshot/screenshot11.png'>
