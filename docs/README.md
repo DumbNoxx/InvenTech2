@@ -33,6 +33,9 @@ Saludos y cuidense.
   Donde me gusta mucho esas ventanas, lastimosa mente, no puedo seguir por ahora porque me tengo que ir a trabajar, pero mañana es mi dia libre, asi que podre estar la mayoria del tiempo dedicado a InvenTech, espero le guste y recuerden seguirme en <a href='https://www.threads.net/@dumb.nox?hl=es'>Threads</a> para saber las nuevas ideas que se me ocurren para la app(en mi pais esta bloqueado el twitter), asi vemos como va mejorando la app si no tienen github o si no quieren seguirme en github. <3
 </p>
 <p align='center'>
-  <li>Update 27-11-24</li> He terminado de rediseñar la ventana de Login(sin embargo siento que le falta algo pero no se que), ahora me pondre con la ventana de registrar usuario. 
+  <li>Update 27-11-24</li> He terminado de rediseñar la ventana de Login, ahora me pondre con la ventana de registrar usuario. 
 </p>
 <img src='/resources/screenshot/screenshot11.png'>
+<p align='center'>
+  <li>Update 28-11-24</li> Ya he terminado de rediseñar la ventana de registrar usuario, me ha quedado hermosa, me encanta el trabajo que estoy haciendo, espero que les guste a ustedes tambien, hacer este readme es como hacer un cuaderno de bitacoras, es hermoso.
+</p>

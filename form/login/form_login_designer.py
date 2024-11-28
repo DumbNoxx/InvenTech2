@@ -50,7 +50,7 @@ class FormLoginDesigner:
 		inicio.place(relx=0.51,rely=0.78,relwidth=0.40,relheight=0.10)
 		inicio.bind('<Return>',(lambda event:self.userRegister()))
 
-		inicio = ct.CTkButton(frame_form_top,text='Salir',font=('Dyuthi',15),fg_color='#BF3131',text_color='#EEEEEE',bg_color='transparent',width=300,height=30,command=self.leave)
+		inicio = ct.CTkButton(frame_form_top,text='Salir',font=('Dyuthi',15),fg_color='#76ABAE',text_color='#222831',bg_color='transparent',width=300,height=30,command=self.leave)
 		inicio.place(x=200,y=450,relwidth=0.50,relheight=0.07)
 		inicio.bind('<Return>',(lambda event:self.leave()))
 
