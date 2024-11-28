@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+
 import tkinter as tk
 from tkinter import ttk
 import util.generic as util
 import os
 from dotenv import load_dotenv
 from tkinter import messagebox
+import customtkinter as ct
 
 load_dotenv()
 icon = os.getenv('ICON')
@@ -21,9 +23,9 @@ class FormRegisterDesigner:
 
 		
 
-	my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework-transformed.png"),
-		dark_image=Image.open("./resources/Icono_Rework-transformed.png"),
-		size=(600,250))
+		my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework-transformed.png"),
+			dark_image=Image.open("./resources/Icono_Rework-transformed.png"),
+			size=(600,250))
 
 
 		frame_logo = tk.Frame(self.ventana,bd=0,width=300,relief=tk.SOLID,padx=10,pady=10,bg='#78c2e2')

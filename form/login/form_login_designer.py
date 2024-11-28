@@ -27,7 +27,7 @@ class FormLoginDesigner:
                                   size=(600,250))
 
 		frame_form_top = tk.Frame(self.ventana,height=50,bd=0,relief=tk.SOLID,bg='#222831')
-		frame_form_top.pack(side='top',fill=tk.X)
+		frame_form_top.pack(side='top',fill=tk.BOTH,expand=tk.YES)
 		
 		title = ct.CTkLabel(frame_form_top,text='Inicio de Sesión',font=('Dyuthi',30),fg_color='transparent',text_color='#EEEEEE',pady=50)
 		title.pack(padx=10,pady=1)
@@ -42,16 +42,16 @@ class FormLoginDesigner:
 		self.password.place(x=250,y=340)
 
 		inicio = ct.CTkButton(frame_form_top,text='Iniciar Sesión',font=('Dyuthi',15),fg_color='#31363F',text_color='#EEEEEE',bg_color='transparent',command=self.verificar)
-		inicio.pack(padx=20,pady=5)
+		inicio.place(relx=0.095,rely=0.78,relwidth=0.40,relheight=0.10)
 		inicio.bind('<Return>',(lambda event:self.verificar()))
 		
 
 		inicio = ct.CTkButton(frame_form_top,text='Registrar Usuario',font=('Dyuthi',15),fg_color='#31363F',text_color='#EEEEEE',bg_color='transparent',command=self.userRegister)
-		inicio.pack(padx=20,pady=5)
+		inicio.place(relx=0.51,rely=0.78,relwidth=0.40,relheight=0.10)
 		inicio.bind('<Return>',(lambda event:self.userRegister()))
 
-		inicio = ct.CTkButton(frame_form_top,text='Salir',font=('Dyuthi',15),fg_color='#31363F',text_color='#EEEEEE',bg_color='transparent',command=self.leave)
-		inicio.pack(padx=20,pady=5)
+		inicio = ct.CTkButton(frame_form_top,text='Salir',font=('Dyuthi',15),fg_color='#BF3131',text_color='#EEEEEE',bg_color='transparent',width=300,height=30,command=self.leave)
+		inicio.place(x=200,y=450,relwidth=0.50,relheight=0.07)
 		inicio.bind('<Return>',(lambda event:self.leave()))
 
 		
