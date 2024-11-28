@@ -39,3 +39,4 @@ Saludos y cuidense.
 <p align='center'>
   <li>Update 28-11-24</li> Ya he terminado de rediseñar la ventana de registrar usuario, me ha quedado hermosa, me encanta el trabajo que estoy haciendo, espero que les guste a ustedes tambien, hacer este readme es como hacer un cuaderno de bitacoras, es hermoso.
 </p>
+<img src='/resources/screenshot/screenshot12.png'>
