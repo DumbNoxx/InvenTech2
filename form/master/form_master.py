@@ -13,6 +13,7 @@ from persistence.repository.auth_user_repository import AuthUserRepository
 from persistence.model import Auth_user
 from tkinter import messagebox
 import customtkinter as ct
+from PIL import Image
 
 
 class MasterPanel:
@@ -21,45 +22,57 @@ class MasterPanel:
 
 		self.ventana = tk.Tk()
 		self.ventana.title('InvenTech')
-		w,h = self.ventana.winfo_screenwidth(),self.ventana.winfo_screenheight()
 		util.centrar_ventana(self.ventana,1200,700)
 		self.ventana.config(bg='#09ab53')
 		icon_1 = tk.PhotoImage(file='./resources/icons.ico')
 
-	
+		my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework.png"),
+			dark_image=Image.open("./resources/Icono_Rework.png"),
+			size=(340,180))
 
-		logo = util.leer_image('./resources/logotipo.png',(350,350))
+		frame_principal = ct.CTkFrame(self.ventana,fg_color='#222831')
+		frame_principal.pack(side='top',fill=tk.X,expand=tk.YES)
 
-		label1 = tk.Label(self.ventana,image=logo,bg='#1abc9c')
-		label1.place(relx=0,rely=0,relwidth=1,relheight=1)
+		frame_left = ct.CTkFrame(frame_principal, width=300,height=700,fg_color='#31363F')
+		frame_left.pack(side='left')
 
 		copyrigth = tk.Label(self.ventana,text='Nox Corporations ©',width=40,padx=6,pady=6,bg='#1abc9c',font=('Dyuthi',10))
-		copyrigth.place(relx=0.90,rely=0.80,relwidth=0.10,relheight=0.10)
+		copyrigth.place(relx=0.90,rely=0.,relwidth=0.10,relheight=0.10)
 
-		label_title = tk.Label(self.ventana,text='InvenTech',bg='#1abc9c',font=('Dyuthi',36),fg='#f4d03f')
-		label_title.place(relx=0.40,rely=0,relwidth=0.20,relheight=0.10)
+		label_title = ct.CTkLabel(self.ventana,text='InvenTech',fg_color='transparent',font=('Dyuthi',36),text_color='#EEEEEE')
+		label_title.place(relx=0.40,rely=0.40,relwidth=0.20,relheight=0.40)
 
-		label_description = tk.Label(self.ventana,text='Sistema de Inventario',bg='#1abc9c',font=('Dyuthi',18),fg='#f4d03f')
-		label_description.place(relx=0.40,rely=0.08,relwidth=0.20,relheight=0.05)
+		label_title_frame = ct.CTkLabel(frame_left,text=f'Bienvenido',fg_color='transparent',font=('Dyuthi',36),text_color="#EEEEEE")
+		label_title_frame.place(relx=0.10,rely=0.05,relwidth=0.80,relheight=0.10)
 
+		frame_menu = ct.CTkFrame(frame_left,width=400,height=400,fg_color='#222831')
+		frame_menu.place(relx=0.20,rely=0.19,relwidth=0.60,relheight=0.40)
+
+		label_menu = ct.CTkLabel(frame_left,text='Menu',fg_color='transparent',font=('Dyuthi',16),text_color='#EEEEEE')
+		label_menu.place(relx=0.28,rely=0.15,relwidth=0.40,relheight=0.03)
+						
 
 		def calcu():
 			CalculadoraCreate()
 
-		boton = ct.CTkButton(self.ventana,text='Calculadora',bg_color='#a3e4d7',fg_color='black',command=calcu)
-		boton.place(relx=0.45,rely=0.23,relwidth=0.09,relheight=0.07)
+		boton = ct.CTkButton(frame_menu,text="Calculadora", fg_color="transparent", hover=False, text_color="#76ABAE",command=calcu)
+		boton.configure(border_width=0, cursor="hand2")
+		boton.place(relx=0.16,rely=0.12,relwidth=0.60,relheight=0.08)
 
 		def product():
 			AgregarProductoCreate()
 
-		boton1 = tk.Button(self.ventana,text='Agregar Producto',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=product)
-		boton1.place(relx=0.30,rely=0.28,relwidth=0.11,relheight=0.07)
+		boton1 = ct.CTkButton(frame_menu,text="Agregar Producto", fg_color="transparent", hover=False, text_color="#76ABAE",command=product)
+		boton1.configure(border_width=0, cursor="hand2")
+		boton1.place(relx=0.14,rely=0.25,relwidth=0.66,relheight=0.10)
 
 		def verProduct():
 			VerProductosCreate()
 
-		boton2 = tk.Button(self.ventana,text='Ver lista de productos',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=verProduct)
-		boton2.place(relx=0.26,rely=0.40,relwidth=0.13,relheight=0.07)
+		boton2 = ct.CTkButton(frame_menu,text="Ver lista de Productos", fg_color="transparent", hover=False, text_color="#76ABAE",command=verProduct)
+		boton2.configure(border_width=0, cursor="hand2")
+		boton2.place(relx=0.08,rely=0.38,relwidth=0.80,relheight=0.10)
+
 
 		def leave():
 			resultado = messagebox.askquestion("Salir", '¿Estás seguro que quieres cerrar sesión?', icon='question', default='no')
@@ -67,8 +80,10 @@ class MasterPanel:
 				self.ventana.destroy()
 				main.PantallaCarga()
 
-		cerrar_sesion = tk.Button(self.ventana,text='Cerrar Sesion',bg='#a3e4d7',font=('Dyuthi',12),fg='black',command=leave)
-		cerrar_sesion.place(relx=0.01,rely=0.80,relwidth=0.09,relheight=0.07)
+		cerrar_sesion = ct.CTkButton(frame_left,text="Leave", fg_color="transparent", hover=False, text_color="#76ABAE",command=verProduct)
+		cerrar_sesion.configure(border_width=0, cursor="hand2")
+		cerrar_sesion.place(relx=0.08,rely=0.60,relwidth=0.80,relheight=0.10)
+
 
 
 		self.ventana.iconphoto(True,icon_1)
