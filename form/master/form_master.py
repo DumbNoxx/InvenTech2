@@ -14,6 +14,7 @@ from persistence.model import Auth_user
 from tkinter import messagebox
 import customtkinter as ct
 from PIL import Image
+import time
 
 
 class MasterPanel:
@@ -23,7 +24,7 @@ class MasterPanel:
 		self.ventana = tk.Tk()
 		self.ventana.title('InvenTech')
 		util.centrar_ventana(self.ventana,1200,700)
-		self.ventana.config(bg='#09ab53')
+		self.ventana.config(bg='#222831')
 		icon_1 = tk.PhotoImage(file='./resources/icons.ico')
 
 		my_image = ct.CTkImage(light_image=Image.open("./resources/Icono_Rework.png"),
@@ -31,16 +32,16 @@ class MasterPanel:
 			size=(340,180))
 
 		frame_principal = ct.CTkFrame(self.ventana,fg_color='#222831')
-		frame_principal.pack(side='top',fill=tk.X,expand=tk.YES)
+		frame_principal.pack(side='top',fill=tk.BOTH,expand=tk.YES)
 
 		frame_left = ct.CTkFrame(frame_principal, width=300,height=700,fg_color='#31363F')
 		frame_left.pack(side='left')
 
-		copyrigth = tk.Label(self.ventana,text='Nox Corporations ©',width=40,padx=6,pady=6,bg='#1abc9c',font=('Dyuthi',10))
-		copyrigth.place(relx=0.90,rely=0.,relwidth=0.10,relheight=0.10)
+		copyrigth = ct.CTkLabel(frame_left,text='Nox Corporations ©',font=('Dyuthi',14),text_color='#EEEEEE',fg_color='#31363F')
+		copyrigth.place(relx=0.18,rely=0.86,relwidth=0.38,relheight=0.20)
 
-		label_title = ct.CTkLabel(self.ventana,text='InvenTech',fg_color='transparent',font=('Dyuthi',36),text_color='#EEEEEE')
-		label_title.place(relx=0.40,rely=0.40,relwidth=0.20,relheight=0.40)
+		label_title = ct.CTkLabel(frame_principal,text='InvenTech',fg_color='transparent',font=('Dyuthi',36),text_color='#EEEEEE')
+		label_title.place(relx=0.40,rely=0.02,relwidth=0.20,relheight=0.07)
 
 		label_title_frame = ct.CTkLabel(frame_left,text=f'Bienvenido',fg_color='transparent',font=('Dyuthi',36),text_color="#EEEEEE")
 		label_title_frame.place(relx=0.10,rely=0.05,relwidth=0.80,relheight=0.10)
@@ -50,8 +51,7 @@ class MasterPanel:
 
 		label_menu = ct.CTkLabel(frame_left,text='Menu',fg_color='transparent',font=('Dyuthi',16),text_color='#EEEEEE')
 		label_menu.place(relx=0.28,rely=0.15,relwidth=0.40,relheight=0.03)
-						
-
+	
 		def calcu():
 			CalculadoraCreate()
 
@@ -80,7 +80,7 @@ class MasterPanel:
 				self.ventana.destroy()
 				main.PantallaCarga()
 
-		cerrar_sesion = ct.CTkButton(frame_left,text="Leave", fg_color="transparent", hover=False, text_color="#76ABAE",command=verProduct)
+		cerrar_sesion = ct.CTkButton(frame_left,text="Leave", fg_color="transparent", hover=False, text_color="#76ABAE",command=leave)
 		cerrar_sesion.configure(border_width=0, cursor="hand2")
 		cerrar_sesion.place(relx=0.08,rely=0.60,relwidth=0.80,relheight=0.10)
 
