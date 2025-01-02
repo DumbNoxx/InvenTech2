@@ -4,6 +4,7 @@ from tkinter import *
 from tkinter import ttk
 import util.generic as util
 from tkinter import messagebox
+import customtkinter as ct
 
 
 class AgregarProductoDesigner:

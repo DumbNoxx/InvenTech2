@@ -41,7 +41,13 @@ class MasterPanel:
 		copyrigth.place(relx=0.18,rely=0.86,relwidth=0.38,relheight=0.20)
 
 		label_title = ct.CTkLabel(frame_principal,text='InvenTech',fg_color='transparent',font=('Dyuthi',36),text_color='#EEEEEE')
-		label_title.place(relx=0.40,rely=0.02,relwidth=0.20,relheight=0.07)
+		label_title.place(relx=0.53,rely=0.02,relwidth=0.20,relheight=0.07)
+
+		frameLocal = ct.CTkFrame(frame_principal,width=700,height=300,fg_color='#31363F')
+		frameLocal.place(relx=0.27,rely=0.15,relwidth=0.70,relheight=0.47)
+
+		boton_actualizar = ct.CTkButton(frame_principal,text='Actualizar',fg_color='#76ABAE',font=('Dyuthi',15),text_color='#EEEEEE')
+		boton_actualizar.place(relx=0.483,rely=0.68,relwidth=0.30,relheight=0.07)
 
 		label_title_frame = ct.CTkLabel(frame_left,text=f'Bienvenido',fg_color='transparent',font=('Dyuthi',36),text_color="#EEEEEE")
 		label_title_frame.place(relx=0.10,rely=0.05,relwidth=0.80,relheight=0.10)
